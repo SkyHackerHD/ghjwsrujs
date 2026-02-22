@@ -114,7 +114,7 @@ task.wait(5)
 
 getgenv().AutofarmSettings = ]=] .. configString .. [=[
 
-loadstring(game:HttpGet("https://pastebin.com/raw/xqu6YKEE"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SkyHackerHD/ghjwsrujs/main/nuloscapr.txt"))()
 ]=]
     
     -- Buscar función queue_on_teleport (compatible con múltiples executors)
@@ -5045,4 +5045,5 @@ task.spawn(function()
         end
     end
 end)
+
 
