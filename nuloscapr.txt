@@ -3850,23 +3850,28 @@ task.spawn(function()
                         end
                         
                     else
+                        -- Recoger dinero inmediatamente sin teletransportarse lejos
+                        local cajeroPos = target.Head.Position
+                        local config = obtenerConfigCajero(cajeroPos)
+                        local posVuelo = Vector3.new(cajeroPos.X + config.offsetX, cajeroPos.Y + config.offsetY - 4, cajeroPos.Z + config.offsetZ)
+                        
+                        -- Pequeña espera para que caiga el dinero
                         if BeforePickingg > 0 then
-                            teleportWithRandomFall()
                             task.wait(BeforePickingg)
-                            local config = obtenerConfigCajero(target.Head.Position)
-                            local posVuelo = Vector3.new(target.Head.Position.X + config.offsetX, target.Head.Position.Y + config.offsetY - 4, target.Head.Position.Z + config.offsetZ)
-                            if config.angulo and config.angulo > 0 then
-                                activarVueloNuevo(CFrame.new(posVuelo), config.angulo)
-                            else
-                                activarVueloNuevo(CFrame.new(posVuelo))
-                            end
-                            task.wait(0.3)
                         end
+                        
+                        -- Posicionarse encima del dinero
+                        if config.angulo and config.angulo > 0 then
+                            activarVueloNuevo(CFrame.new(posVuelo), config.angulo)
+                        else
+                            activarVueloNuevo(CFrame.new(posVuelo))
+                        end
+                        task.wait(0.3)
                         
                         local armaUsada = armaActual
                         task.spawn(function() task.wait(0.3) recargar(armaUsada) end)
                         
-                        local recogio, cantidadRecogida = recogerDineroCerca(target.Head.Position)
+                        local recogio, cantidadRecogida = recogerDineroCerca(cajeroPos)
                         if recogio then Status.Text = "Collected! (" .. cantidadRecogida .. " drops)" end
                         
                         task.wait(0.3)
@@ -3894,8 +3899,8 @@ task.spawn(function()
                             end
                         end
                         
+                        -- Solo espera entre cajeros, sin teletransporte lejano
                         if breakATMTime > 0 then
-                            teleportWithRandomFall()
                             task.wait(breakATMTime)
                         end
                     end
