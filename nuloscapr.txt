@@ -1,0 +1,5051 @@
+task.delay(15, function()
+
+
+
+script_key = 'VERSION_LIMPIA'  -- Ya no se valida, solo para compatibilidad
+
+
+getgenv().AutofarmSettings = {
+    ["Config"] = {
+        ["Fps"] = 15,
+        ["AntiBots"] = true,
+        ["PrioritizeShooting"] = false
+    },
+    ["CashInterval"] = {
+        ["CollectTimer"] = 2,
+        ["BreakATM"] = 1,
+        ["PickupInterval"] = 0.4,
+        ["BeforePicking"] = 0.5
+    },
+    ["Webhook"] = {
+        ["URL"] = "https://discord.com/api/webhooks/1462217772762267881/zXKL5RNvlAxS9qcmVYRY87SE2Jj1UkeFdQhWMBca_L_7TaF18RYgVmjRIpZ1TjshRK5z",
+        ["Interval"] = 5
+    },
+    ["Serverhop"] = {
+        ["Toggle"] = false,
+        ["Type"] = 1,
+        ["Knocks"] = 0,
+        ["Time"] = 0,
+        ["Blacklisted_IDs"] = {6007859152, 78295368, 8276923688, 667867137, 195399682, 133136396, 1523513359, 2314160157, 368128037, 143288359, 142632999, 1910378535, 730417201, 57393204, 2693040181, 244844600, 1641635899, 929888317, 1538998338, 94763083, 890658894, 1339371605, 425328729, 2407503963, 1288285, 202334307, 2327001188, 295762020, 1731561580, 2395613299, 572110963, 1906833526, 56602747, 3272274043, 1729667205, 1897257102, 1459611794, 3333755037, 469524638, 338972829, 394803371, 5459075255, 315592893, 406735038, 5849024706, 1662851274, 977897682, 691818708, 3790829783, 3185389788, 905486560, 638636257, 601262307, 11522278, 84570351, 7198900465, 582848759, 797102336, 97136896, 4303763714, 2938620172, 113950996, 373563679, 219316519, 145740081, 2455599428, 78295368, 29761878, 2494599530, 80974189, 534344045, 1679536495, 1181614445, 1125992823, 628662650, 1137631616, 4932403585, 4338260355, 948787588, 1830168970, 2882918795, 96315796, 3723397535, 665469352, 88134065, 667169207, 31846842, 106672573, 1098138046, 178663874, 253993416, 221295049, 53715402, 52535762, 2780817879, 4969374172, 2028200414, 1638849002, 993348074, 372914675, 1001482742, 1367411191, 1708929528, 4727925243, 110928385, 259420681, 89473551, 76272143, 104796690, 7077693971, 288465430, 417219097, 3950637598, 173500963, 3146992168, 1485126185, 1981461035, 1527425585, 1726476853, 325087804, 213277245, 460997185, 878279238, 2589966928, 219056725, 139852375, 281175, 2278707804, 5019169384, 149238381, 240075378, 473150067, 186804856, 2393807480, 3611927169, 3176655491, 1391475335, 95101575, 2352517769, 94102158, 3053056654, 79714966, 939920025, 633295515, 133827245, 191961778, 5136267958, 4656808630, 1029137081, 4509659838, 2230964929, 41372359, 91167436, 563505869, 2338712284, 1947198187, 588298991, 419293944, 1644663549, 2773773063, 246522640, 69612307, 3146910490, 196453148, 3243760417, 5476000547, 1091633963, 1436460, 88245038, 2250695471, 3894123313, 893610805, 1246909240, 226523973, 29242182, 1075239751, 111186760, 919135046, 3055227728, 576904024, 1570505562, 2406939482, 29438812, 127492959, 2212830051, 50801509, 171832169, 63531881, 5070197615, 6124600180, 23337851, 126284670, 721443713, 25490309, 2348905353, 4437818262, 359209880, 1593707423, 499671971, 321178532, 75750310, 464358320, 732240818, 21345211, 399907775, 1155756998, 4365585353, 435981261, 479990735, 53421021, 476419039, 652143586, 422314979, 4395852780, 114394094, 2320169967, 175846384, 3983012846, 3200707570, 1494483959, 212276218, 7389058043, 4799579130, 5817777160, 4002499592, 339868684, 971662350, 779973647, 385530900, 910085146, 118842399, 286293026, 8850467, 3944434729, 224068649, 9006132, 3751625791, 2521650242, 371528772, 386745414, 2456681546, 2700510295, 1220684901, 409187435, 81720432, 855350386, 5348287604, 296295541, 439942262, 534942844, 1516086396, 1373313, 123597957, 1177029768, 8195210, 186731666, 303660180, 1962396833, 545752225, 1335471269, 81900718, 3934559413, 693429, 1333636279, 53114045, 2311902400, 448443585, 14740678, 1063187678, 4061250786, 1878414563, 4337241317, 2640311526, 38079729, 1174637810, 521182451, 65217781, 1484221690, 418479356, 680971517, 3390225662, 7470462205, 5554615552, 484459776, 812291, 4448767244, 95397144, 3619583261, 3354916126, 3689221411, 9221415, 1394101548, 1720771884, 133229872, 1129106736, 971193650, 969098547, 273163572, 2695980342, 326671671, 1446694201, 3705441594, 103241021, 1678675262, 784956738, 328566086, 151438665, 334187851, 187501902, 178740562, 859071826, 110398802, 207355228, 86256991, 1118543199, 293014882, 544064867, 2456939876, 8704742767, 1107873139, 78239093, 1539642742, 22009222, 2396923272, 1390773641, 3718161806, 7001683347, 1424338327, 79242647, 1688591768, 102507934, 920409507, 372815271, 416923057, 202106293, 2064231863, 5545404, 2879356349, 464135620, 119770566, 4423402956, 127663566, 4434472404, 110112214, 139009494, 2336443864, 1304800729, 1319112150, 5832953307, 337774043, 277634539, 1688851949, 1520002548, 2269462008, 620269054, 2238004736, 2846299656, 7092131341, 2588495375, 460750353, 225429011, 322186771, 2063398426, 952772126, 93101606, 14921263, 2207291, 1410854465, 186480194, 1778855490, 1440767553, 170526279, 408766031, 582063704, 1116204633, 2248488540, 444841570, 874677864, 16049776, 79474, 4717217397, 1680068241, 30586516, 228204181, 2330781345, 7168220833, 1925852836, 310775464, 2474507945, 336965291, 3488718508, 660358844, 171087551, 110792388, 3133243078, 385900233, 2209283788, 8886994638, 4239065, 1561226973, 948293345, 3044484840, 2400546537, 4450100976, 35913464, 654712576, 1958352651, 632026895, 318463765, 271083290, 448679712, 3144236841, 3525918505, 32581425, 2360878898, 40527673, 386699067, 298940220, 463494977, 3931862850, 448012101, 443031366, 294268763, 1079746396, 1149980511, 3387514724, 278632296, 6074834798, 146712433, 149290866, 2962579319, 752396154, 1573228410, 999511943, 181125001, 3192549270, 181751703, 69236636, 686532510, 1470379939, 2205951910, 274220978, 524527539, 1947015091, 607348662, 4002541497, 817620921, 1797875653, 1139085255, 343431112, 486389707, 2827093972, 1781127128, 1739497432, 99356639, 2856873958, 108083180, 1395193841, 1947590641, 970166262}
+    },
+    ["VaultFarm"] = {
+        ["System"] = "Off",
+        ["ForcedVault"] = false
+    }
+}
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- SISTEMA DE AUTO-EJECUCIÓN
+-- ═══════════════════════════════════════════════════════════════════════════
+
+local HttpService = game:GetService("HttpService")
+local AUTO_EXEC_QUEUED = false
+
+local function setupAutoExec()
+    if AUTO_EXEC_QUEUED then
+        return
+    end
+    AUTO_EXEC_QUEUED = true
+    
+    local configActual = getgenv().AutofarmSettings
+    
+    -- Convertir Blacklisted_IDs a string
+    local blacklistedString = ""
+    if configActual.Serverhop.Blacklisted_IDs and #configActual.Serverhop.Blacklisted_IDs > 0 then
+        local ids = {}
+        for _, id in ipairs(configActual.Serverhop.Blacklisted_IDs) do
+            table.insert(ids, tostring(id))
+        end
+        blacklistedString = table.concat(ids, ", ")
+    end
+    
+    -- Generar string de configuración
+    local configString = string.format([=[
+{
+    ["Config"] = {
+        ["Fps"] = %d,
+        ["AntiBots"] = %s,
+        ["PrioritizeShooting"] = %s
+    },
+    ["CashInterval"] = {
+        ["CollectTimer"] = %s,
+        ["BreakATM"] = %s,
+        ["PickupInterval"] = %s,
+        ["BeforePicking"] = %s
+    },
+    ["Webhook"] = {
+        ["URL"] = "%s",
+        ["Interval"] = %d
+    },
+    ["Serverhop"] = {
+        ["Toggle"] = %s,
+        ["Type"] = %d,
+        ["Knocks"] = %d,
+        ["Time"] = %d,
+        ["Blacklisted_IDs"] = {%s}
+    },
+    ["VaultFarm"] = {
+        ["System"] = "%s",
+        ["ForcedVault"] = %s
+    }
+}
+]=],
+        configActual.Config.Fps or 15,
+        tostring(configActual.Config.AntiBots or false),
+        tostring(configActual.Config.PrioritizeShooting or false),
+        tostring(configActual.CashInterval.CollectTimer or 2),
+        tostring(configActual.CashInterval.BreakATM or 1),
+        tostring(configActual.CashInterval.PickupInterval or 0.4),
+        tostring(configActual.CashInterval.BeforePicking or 0.5),
+        configActual.Webhook.URL or "",
+        configActual.Webhook.Interval or 60,
+        tostring(configActual.Serverhop.Toggle or false),
+        configActual.Serverhop.Type or 1,
+        configActual.Serverhop.Knocks or 0,
+        configActual.Serverhop.Time or 0,
+        blacklistedString,
+        configActual.VaultFarm.System or "Off",
+        tostring(configActual.VaultFarm.ForcedVault or false)
+    )
+    
+    -- Script que se ejecutará en el próximo servidor
+    local autoExecScript = [=[
+repeat task.wait() until game:IsLoaded()
+task.wait(5)
+
+getgenv().AutofarmSettings = ]=] .. configString .. [=[
+
+loadstring(game:HttpGet("https://pastebin.com/raw/xqu6YKEE"))()
+]=]
+    
+    -- Buscar función queue_on_teleport (compatible con múltiples executors)
+    local queueFunc = queue_on_teleport or 
+                      queueonteleport or 
+                      (syn and syn.queue_on_teleport) or 
+                      (fluxus and fluxus.queue_on_teleport)
+    
+    if queueFunc then
+        queueFunc(autoExecScript)
+        print("✅ Auto-ejecución configurada para próximo servidor")
+    else
+        warn("⚠️ Tu executor no soporta queue_on_teleport")
+    end
+end
+
+pcall(setupAutoExec)
+
+-- ═══════════════════════════════════════════════════════════════════════════
+
+print("✅ Configuración cargada")
+print("🚀 Iniciando autofarm...")
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- CÓDIGO DEL AUTOFARM
+-- ═══════════════════════════════════════════════════════════════════════════
+
+local executor =
+    (getexecutor and getexecutor()) or
+    (identifyexecutor and identifyexecutor()) or
+    "Desconocido"
+
+if executor == "Xeno" then
+    local Players = game:GetService("Players")
+    local RunService = game:GetService("RunService")
+    local VirtualUser = game:GetService("VirtualUser")
+    local VirtualInputManager = game:GetService("VirtualInputManager")
+
+    local fired = false
+
+    Players.LocalPlayer.CharacterAdded:Connect(function()
+        fired = false
+    end)
+
+    getgenv().fireclickdetector = function(object, distance, event)
+        if not fired then
+            fired = true
+            VirtualInputManager:SendKeyEvent(true, 101, false, peeky)
+        end
+
+        local character = Players.LocalPlayer.Character
+        if character and character:FindFirstChildOfClass("Tool") then
+            character.Humanoid:UnequipTools()
+        end
+
+        local click_detector = object:FindFirstChild("ClickDetector") or object
+        local old_parent = click_detector.Parent
+
+        local stub_part = Instance.new("Part")
+        stub_part.Transparency = 1
+        stub_part.Size = Vector3.new(30, 30, 30)
+        stub_part.Anchored = true
+        stub_part.CanCollide = false
+        stub_part.Parent = workspace
+
+        click_detector.Parent = stub_part
+        click_detector.MaxActivationDistance = math.huge
+
+        local connection
+        connection = RunService.Heartbeat:Connect(function()
+            local cam = workspace.CurrentCamera
+            stub_part.CFrame =
+                cam.CFrame
+                * CFrame.new(0, 0, -20)
+                * CFrame.new(cam.CFrame.LookVector)
+
+            VirtualUser:ClickButton1(Vector2.new(20, 20), cam.CFrame)
+        end)
+
+        click_detector.MouseClick:Once(function()
+            connection:Disconnect()
+            click_detector.Parent = old_parent
+            stub_part:Destroy()
+        end)
+
+        task.delay(3, function()
+            if connection then
+                connection:Disconnect()
+            end
+            click_detector.Parent = old_parent
+            stub_part:Destroy()
+        end)
+    end
+end
+
+-- antiAFK
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+for _, v in ipairs(getconnections(LocalPlayer.Idled)) do
+    v:Disable()
+end
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local RunService = game:GetService("RunService")
+local RS = game:GetService("ReplicatedStorage")
+local botIDs = {}
+
+--  VARIABLES ANTI-CICLO (DEBEN ESTAR AL INICIO)
+local LAST_HOP_TIME = 0
+local HOP_COUNT = 0
+local SCRIPT_START_TIME = tick()
+local ESTABLECIDO_SEGUNDOS = 30
+local breakATMTime = getgenv().AutofarmSettings["CashInterval"]["BreakATM"] or 1
+local BeforePickingg = getgenv().AutofarmSettings["CashInterval"]["BeforePicking"] or 0.5
+local waitTime = getgenv().AutofarmSettings["CashInterval"]["CollectTimer"] or 2
+local ANTI_BOTS_ENABLED = getgenv().AutofarmSettings.Config.AntiBots or false
+local clickInterval = (getgenv().AutofarmSettings["CashInterval"]["CollectTimer"] or 2) / 10
+local pickupInterval = getgenv().AutofarmSettings["CashInterval"]["PickupInterval"] or 0
+
+--  POSICIONES DE CÁMARA CALIBRADAS PARA XENO (CFrame completo con rotación)
+local XENO_CAM_POSITIONS = {
+    ["LMG"] = CFrame.new(-620.8153, 30.0514, -321.0182, -0.9999, -0.0092, 0.0134, 0.0000, 0.8252, 0.5648, -0.0162, 0.5648, -0.8251),
+    ["LMG_AMMO"] = CFrame.new(-615.7817, 31.9449, -330.0922, -0.9999, -0.0092, 0.0134, 0.0000, 0.8252, 0.5648, -0.0162, 0.5648, -0.8251),
+    ["AUG"] = CFrame.new(-279.3803, 49.7234, -242.8080, -0.9989, 0.0087, -0.0450, -0.0000, 0.9816, 0.1908, 0.0459, 0.1906, -0.9806),
+    ["AUG_AMMO"] = CFrame.new(-279.3803, 49.7234, -242.8080, -0.9989, 0.0087, -0.0450, -0.0000, 0.9816, 0.1908, 0.0459, 0.1906, -0.9806),
+    ["GRENADE"] = CFrame.new(109.3448, -13.0117, -292.4666, -0.9998, -0.0116, 0.0173, -0.0000, 0.8321, 0.5546, -0.0208, 0.5545, -0.8319),
+    ["VAULT_PICKUP"] = CFrame.new(-675.3058, -17.2576, -286.3848, -0.9998, -0.0116, 0.0173, -0.0000, 0.8321, 0.5546, -0.0208, 0.5545, -0.8319),
+}
+
+local ES_XENO = (getexecutor and getexecutor() == "Xeno") or (identifyexecutor and identifyexecutor() == "Xeno")
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- ZONA DE ESPERA SEGURA (lejos del mapa, personaje quieto mientras compra)
+-- ═══════════════════════════════════════════════════════════════════════════
+-- Zona de espera segura donde el personaje espera quieto mientras recarga
+local ZONA_ESPERA_SEGURA = Vector3.new(-620.8822, 15, -305.3392)
+-- ═══════════════════════════════════════════════════════════════════════════
+
+--  FUNCIÓN HELPER PARA FORZAR CÁMARA EN XENO (con thread continuo)
+local function forzarCamaraXeno(camKey, duracion)
+    if not ES_XENO or not XENO_CAM_POSITIONS[camKey] then return nil end
+    
+    local activo = true
+    local thread = task.spawn(function()
+        local startTime = tick()
+        while activo and (not duracion or (tick() - startTime) < duracion) do
+            workspace.CurrentCamera.CFrame = XENO_CAM_POSITIONS[camKey]
+            task.wait()
+        end
+    end)
+    
+    return function()
+        activo = false
+    end
+end
+
+-- Variables del sistema LMG
+local armasNecesarias = {
+    ["[LMG]"] = true,
+    ["[AUG]"] = true  
+}
+
+-- Sistema de 2 fases
+local cajerosRotos = {}
+local FASE_ROMPIENDO = true
+
+-- 
+local VAULT_ROBANDO = false
+local VAULT_COOLDOWN = false
+local COMPRANDO_ARMAS = true
+local BloquedKO = false
+local VAULT_ULTIMO_TIEMPO = 0
+local VAULT_COOLDOWN_SEGUNDOS = 600 -- 10 minutos
+local VAULT_SYSTEM_ENABLED = (getgenv().AutofarmSettings.VaultFarm.System == "On")
+
+math.randomseed(tick() * 1000 + player.UserId * 100 + os.time() + math.random(1, 999999))
+-- Calentar el generador
+for i = 1, 10 do math.random() end
+
+if not VAULT_SYSTEM_ENABLED then
+    getgenv().AutofarmSettings.VaultFarm.ForcedVault = false
+end
+
+local mainEvent = RS:WaitForChild("MainEvent", 10)
+
+local codesList = {
+    "VALENTINES2026",
+    "HALLOWEEN25",
+    "OCTOBER25",
+    "HAPPYHOLIDAYS25",
+    "XMAS2025",
+    "XMASEVE25"
+}
+    
+task.spawn(function()
+    for _, currentCode in ipairs(codesList) do
+        local argsTable = {
+            "EnterPromoCode",
+            currentCode
+        }
+        mainEvent:FireServer(unpack(argsTable))
+        task.wait(10)
+    end
+end)
+
+-- Variables del sistema Anti-Jail
+local antiJailRunning = false
+local jailProcessActive = false
+local keyItemName = "[Key]"
+local armaActual = nil
+local AUG_GASTADA = false
+
+local PRIORITIZE_SHOOTING = getgenv().AutofarmSettings.Config.PrioritizeShooting
+
+local cajerosEspeciales = {
+    Vector3.new(-623.9984741210938, 24.90001678466797, -285.0622253417969),
+    Vector3.new(-950.89892578125, 24.900001525878906, -162.76400756835938),
+    Vector3.new(-871.3983764648438, 24.500015258789062, -90.90840911865234),
+    Vector3.new(-937.2838745117188, 23.80324935913086, -664.3499145507812),
+    Vector3.new(576.7017822265625, 53.366783142089844, -471.41058349609375),
+    Vector3.new(-474.1751708984375, 25.000017166137695, -284.087646484375),
+}
+
+local function esCajeroEspecialFunc(cajeroPos)
+    for _, pos in ipairs(cajerosEspeciales) do
+        if (cajeroPos - pos).Magnitude < 1 then
+            return true
+        end
+    end
+    return false
+end
+
+local isAutoShooting = false
+local currentTarget = nil
+
+for i, v in pairs(workspace:GetDescendants()) do
+    if v:IsA("Seat") then
+        v:Destroy()
+    end
+end
+
+getgenv().PayloadAccess = nil
+
+-- src/UIS/etc/function.lua --
+
+local function addCorner(uiObject, scale, offset)
+    local c = Instance.new("UICorner", uiObject)
+    c.CornerRadius = UDim.new(scale or 12, offset or 12)
+end
+
+local function formatWithCommas(number)
+    return tostring(number):reverse():gsub("(%d%d%d)", "%1,"):reverse():gsub("^,", "")
+end
+
+local function urlEncode(str)
+    if not str then return "" end
+    str = tostring(str)
+    str = string.gsub(str, "([^%w%-%.%_%~])",
+        function(c) return string.format("%%%02X", string.byte(c)) end)
+    return str
+end    
+
+-- src/UIS/etc/variables.lua --
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.ResetOnSpawn = false
+ScreenGui.IgnoreGuiInset = true
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local MainFrame = Instance.new("Frame")
+local MarcoGris = Instance.new("Frame")
+local Principal = Instance.new("Frame")
+local Nombre = Instance.new("TextLabel")
+local TimeDHC = Instance.new("TextLabel")
+local MarcoGris2 = Instance.new("Frame")
+local Principal2 = Instance.new("Frame")
+local OldMoney = Instance.new("TextLabel")
+local FarmingDHC = Instance.new("TextLabel")
+local NewMoney = Instance.new("TextLabel")
+
+local OldMoneyReal = Instance.new("TextLabel")
+local FarmingReal = Instance.new("TextLabel")
+local NewMoneyReal = Instance.new("TextLabel")
+local Status = Instance.new("TextLabel")
+
+-- 📌 Configuraciones personalizadas por cajero
+local cajeroConfigs = {
+    [Vector3.new(-474.3752136230469, 24.99999237060547, -292.2875671386719)] = {
+        offsetX = 5.5, offsetY = -0.5, offsetZ = 0, angulo = 100
+    },
+    [Vector3.new(-474.1751708984375, 25.000017166137695, -284.087646484375)] = {
+        offsetX = 5.5, offsetY = -0.5, offsetZ = 0, angulo = 100
+    },
+    [Vector3.new(-474.1751708984375, 25.000017166137695, -276.287841796875)] = {
+        offsetX = 5.5, offsetY = -0.5, offsetZ = 0, angulo = 100
+    },
+    [Vector3.new(-248.9751739501953, 23.905187606811523, -410.6875915527344)] = {
+        offsetX = 5.5, offsetY = 0, offsetZ = 0, angulo = 100
+    },
+    [Vector3.new(-3.8986852169036865, 23.500019073486328, -102.81074523925781)] = {
+        offsetX = 0.5, offsetY = 0.5, offsetZ = -4, angulo = 100
+    },
+    [Vector3.new(584.40185546875, 50.800025939941406, -273.4644775390625)] = {
+        offsetX = 0, offsetY = 3.5, offsetZ = -2, angulo = 0
+    },
+    [Vector3.new(596.3018798828125, 53.366783142089844, -471.41094970703125)] = {
+        offsetX = 1, offsetY = 2.5, offsetZ = 3, angulo = 0
+    },
+    [Vector3.new(-450.2978820800781, 24.900001525878906, -330.16424560546875)] = {
+        offsetX = -0.7, offsetY = 3, offsetZ = -1, angulo = 0
+    },
+    [Vector3.new(95.30172729492188, 24.700010299682617, -519.1631469726562)] = {
+        offsetX = -4, offsetY = 2, offsetZ = 0, angulo = 260
+    },
+    [Vector3.new(-403.16265869140625, 24.899999618530273, -591.0032348632812)] = {
+        offsetX = -3, offsetY = 2, offsetZ = -2.5, angulo = 220
+    },
+    [Vector3.new(519.2359008789062, 51.30000305175781, -303.0762023925781)] = {
+        offsetX = 0.5, offsetY = 0, offsetZ = -3, angulo = 200
+    },
+    [Vector3.new(-219.30860900878906, 25.10000228881836, -785.353759765625)] = {
+        offsetX = 3.5, offsetY = 1.5, offsetZ = 0, angulo = 100
+    },
+    [Vector3.new(576.7017822265625, 53.366783142089844, -471.41058349609375)] = {
+        offsetX = 1, offsetY = 2.5, offsetZ = 3, angulo = 0
+    },
+    [Vector3.new(-481.49822998046875, 24.500017166137695, -79.910888671875)] = {
+        offsetX = 3.5, offsetY = 2, offsetZ = 1.5, angulo = 50,
+    },
+    [Vector3.new(-623.9984741210938, 24.90001678466797, -285.0622253417969)] = {
+        offsetX = 0, offsetY = 3.5, offsetZ = -2, angulo = 0
+    },
+    [Vector3.new(-626.9984741210938, 24.90001678466797, -285.0621643066406)] = {
+        offsetX = 0, offsetY = 3.5, offsetZ = -2, angulo = 0
+    },
+    [Vector3.new(-809.5208740234375, 24.900001525878906, -286.1871643066406)] = {
+        offsetX = -1.10, offsetY = 0.5, offsetZ = 2.5, angulo = 10
+    },
+    [Vector3.new(-940.498779296875, 24.900001525878906, -162.76400756835938)] = {
+        offsetX = 1, offsetY = 0, offsetZ = -1.5, angulo = 130
+    },
+    [Vector3.new(-950.89892578125, 24.900001525878906, -162.76400756835938)] = {
+        offsetX = 1, offsetY = 0, offsetZ = -1.5, angulo = 130
+    },
+    [Vector3.new(-862.198486328125, 24.500015258789062, -90.90840911865234)] = {
+        offsetX = 0, offsetY = 2, offsetZ = 0.5, angulo = 0,
+    },
+    [Vector3.new(-871.3983764648438, 24.500015258789062, -90.90840911865234)] = {
+        offsetX = 0, offsetY = 2, offsetZ = 0.5, angulo = 0,
+    },
+    [Vector3.new(-554.5250854492188, 25.17499351501465, 269.14996337890625)] = {
+        offsetX = -2, offsetY = 5.5, offsetZ = -1.5, angulo = 0,
+    },  
+    [Vector3.new(-612.35009765625, 23.67499542236328, 270.6750183105469)] = {
+        offsetX = 2.5, offsetY = 3, offsetZ = 1.5, angulo = 50
+    },
+    [Vector3.new(-937.2838745117188, 23.80324935913086, -657.3499145507812)] = {
+        offsetX = -0.5, offsetY = -0.5, offsetZ = 0, angulo = 0
+    },
+    [Vector3.new(-937.2838745117188, 23.80324935913086, -664.3499145507812)] = {
+        offsetX = -0.5, offsetY = -0.5, offsetZ = 0, angulo = 0
+    },
+    [Vector3.new(-859.6049194335938, 23.92999839782715, -660.2750244140625)] = {
+        offsetX = 3.5, offsetY = 0.5, offsetZ = 2, angulo = 0
+    },
+    [Vector3.new(-795.9052734375, 23.80215072631836, -655.1375122070312)] = {
+        offsetX = 3, offsetY = 0.5, offsetZ = -1.5, angulo = 0
+    },
+}
+
+local function obtenerConfigCajero(posicionCajero)
+    for coordenada, config in pairs(cajeroConfigs) do
+        if (posicionCajero - coordenada).Magnitude < 0.1 then
+            return config
+        end
+    end
+    return {offsetX = 0, offsetY = -4, offsetZ = 0}
+end
+
+local Players = game:GetService("Players")
+local StarterGui = game:GetService("StarterGui")
+local UserInputService = game:GetService("UserInputService")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local currency = player:WaitForChild("DataFolder"):WaitForChild("Currency")
+
+pcall(function()
+	StarterGui:SetCore("TopbarEnabled", false)
+	StarterGui:SetCore("ResetButtonCallback", false)
+end)
+
+for _, v in ipairs(Enum.CoreGuiType:GetEnumItems()) do
+	pcall(function()
+		StarterGui:SetCoreGuiEnabled(v, false)
+	end)
+end
+
+UserInputService.MouseIconEnabled = false
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "AutofarmGui"
+ScreenGui.IgnoreGuiInset = true
+ScreenGui.ResetOnSpawn = false
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
+ScreenGui.DisplayOrder = 999999
+ScreenGui.Parent = playerGui
+
+local Background = Instance.new("Frame")
+Background.Size = UDim2.new(1,0,1,0)
+Background.BackgroundColor3 = Color3.fromRGB(0,0,0)
+Background.BorderSizePixel = 0
+Background.Parent = ScreenGui
+
+local MainFrame = Instance.new("Frame")
+MainFrame.Size = UDim2.new(0,400,0,260)
+MainFrame.Position = UDim2.new(0.5,0,0.5,0)
+MainFrame.AnchorPoint = Vector2.new(0.5,0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(10,10,10)
+MainFrame.BorderSizePixel = 0
+MainFrame.Parent = ScreenGui
+
+Instance.new("UICorner", MainFrame).CornerRadius = UDim.new(0,12)
+local Stroke = Instance.new("UIStroke", MainFrame)
+Stroke.Thickness = 1
+Stroke.Color = Color3.fromRGB(120,120,120)
+
+Nombre = Instance.new("TextLabel")
+Nombre.Size = UDim2.new(1,0,0,36)
+Nombre.Position = UDim2.new(0,0,0,10)
+Nombre.BackgroundTransparency = 1
+Nombre.Text = player.DisplayName
+Nombre.Font = Enum.Font.GothamMedium
+Nombre.TextSize = 22
+Nombre.TextColor3 = Color3.fromRGB(180,180,180)
+Nombre.TextXAlignment = Enum.TextXAlignment.Center
+Nombre.Parent = MainFrame
+
+TimeDHC = Instance.new("TextLabel")
+TimeDHC.Size = UDim2.new(0,140,0,30)
+TimeDHC.Position = UDim2.new(0.62,0,0.02,0)
+TimeDHC.BackgroundTransparency = 1
+TimeDHC.Text = "00:00:00"
+TimeDHC.Font = Enum.Font.Gotham
+TimeDHC.TextSize = 18
+TimeDHC.TextColor3 = Color3.fromRGB(150,150,150)
+TimeDHC.Parent = MainFrame
+
+local StatsFrame = Instance.new("Frame")
+StatsFrame.Size = UDim2.new(0,360,0,140)
+StatsFrame.Position = UDim2.new(0.5,0,0.5,10)
+StatsFrame.AnchorPoint = Vector2.new(0.5,0.5)
+StatsFrame.BackgroundColor3 = Color3.fromRGB(0,0,0)
+StatsFrame.BorderSizePixel = 0
+StatsFrame.Parent = MainFrame
+Instance.new("UICorner", StatsFrame).CornerRadius = UDim.new(0,10)
+
+OldMoney = Instance.new("TextLabel")
+OldMoney.Size = UDim2.new(0,160,0,40)
+OldMoney.Position = UDim2.new(0.05,0,0,0)
+OldMoney.BackgroundTransparency = 1
+OldMoney.Text = "Old Money:"
+OldMoney.Font = Enum.Font.Gotham
+OldMoney.TextSize = 15
+OldMoney.TextColor3 = Color3.fromRGB(200,200,200)
+OldMoney.TextXAlignment = Enum.TextXAlignment.Left
+OldMoney.Parent = StatsFrame
+
+OldMoneyReal = Instance.new("TextLabel")
+OldMoneyReal.Size = UDim2.new(0,160,0,40)
+OldMoneyReal.Position = UDim2.new(0.45,0,0,0)
+OldMoneyReal.BackgroundTransparency = 1
+OldMoneyReal.Font = Enum.Font.GothamMedium
+OldMoneyReal.TextSize = 16
+OldMoneyReal.TextColor3 = Color3.fromRGB(56,236,131)
+OldMoneyReal.TextXAlignment = Enum.TextXAlignment.Left
+OldMoneyReal.Parent = StatsFrame
+
+FarmingDHC = Instance.new("TextLabel")
+FarmingDHC.Size = UDim2.new(0,160,0,40)
+FarmingDHC.Position = UDim2.new(0.05,0,0.33,0)
+FarmingDHC.BackgroundTransparency = 1
+FarmingDHC.Text = "Farming:"
+FarmingDHC.Font = Enum.Font.Gotham
+FarmingDHC.TextSize = 15
+FarmingDHC.TextColor3 = Color3.fromRGB(200,200,200)
+FarmingDHC.TextXAlignment = Enum.TextXAlignment.Left
+FarmingDHC.Parent = StatsFrame
+
+FarmingReal = Instance.new("TextLabel")
+FarmingReal.Size = UDim2.new(0,160,0,40)
+FarmingReal.Position = UDim2.new(0.45,0,0.33,0)
+FarmingReal.BackgroundTransparency = 1
+FarmingReal.Font = Enum.Font.GothamMedium
+FarmingReal.TextSize = 16
+FarmingReal.Text = "+ $0"
+FarmingReal.TextColor3 = Color3.fromRGB(56,236,131)
+FarmingReal.TextXAlignment = Enum.TextXAlignment.Left
+FarmingReal.Parent = StatsFrame
+
+NewMoney = Instance.new("TextLabel")
+NewMoney.Size = UDim2.new(0,160,0,40)
+NewMoney.Position = UDim2.new(0.05,0,0.66,0)
+NewMoney.BackgroundTransparency = 1
+NewMoney.Text = "New Money:"
+NewMoney.Font = Enum.Font.Gotham
+NewMoney.TextSize = 15
+NewMoney.TextColor3 = Color3.fromRGB(200,200,200)
+NewMoney.TextXAlignment = Enum.TextXAlignment.Left
+NewMoney.Parent = StatsFrame
+
+NewMoneyReal = Instance.new("TextLabel")
+NewMoneyReal.Size = UDim2.new(0,160,0,40)
+NewMoneyReal.Position = UDim2.new(0.45,0,0.66,0)
+NewMoneyReal.BackgroundTransparency = 1
+NewMoneyReal.Font = Enum.Font.GothamMedium
+NewMoneyReal.TextSize = 16
+NewMoneyReal.TextColor3 = Color3.fromRGB(56,236,131)
+NewMoneyReal.TextXAlignment = Enum.TextXAlignment.Left
+NewMoneyReal.Parent = StatsFrame
+
+Status = Instance.new("TextLabel")
+Status.Size = UDim2.new(1,0,0,30)
+Status.Position = UDim2.new(0,0,1,-35)
+Status.BackgroundTransparency = 1
+Status.Text = "Loading..."
+Status.Font = Enum.Font.Gotham
+Status.TextSize = 17
+Status.TextColor3 = Color3.fromRGB(150,150,150)
+Status.TextXAlignment = Enum.TextXAlignment.Center
+Status.Parent = MainFrame
+
+-- ============= RADAR DE ATMs =============
+local RADAR_SIZE = 200
+local RADAR_DOT_SIZE = 8
+local RADAR_RANGE = 600
+
+local RadarFrame = Instance.new("Frame")
+RadarFrame.Name = "RadarFrame"
+RadarFrame.Size = UDim2.new(0, RADAR_SIZE + 20, 0, RADAR_SIZE + 50)
+RadarFrame.Position = UDim2.new(1, -RADAR_SIZE - 30, 0.5, -(RADAR_SIZE/2 + 25))
+RadarFrame.AnchorPoint = Vector2.new(0, 0.5)
+RadarFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+RadarFrame.BorderSizePixel = 0
+RadarFrame.Parent = ScreenGui
+Instance.new("UICorner", RadarFrame).CornerRadius = UDim.new(0, 12)
+local RadarStroke = Instance.new("UIStroke", RadarFrame)
+RadarStroke.Thickness = 1
+RadarStroke.Color = Color3.fromRGB(120, 120, 120)
+
+local RadarTitle = Instance.new("TextLabel")
+RadarTitle.Size = UDim2.new(1, 0, 0, 28)
+RadarTitle.Position = UDim2.new(0, 0, 0, 0)
+RadarTitle.BackgroundTransparency = 1
+RadarTitle.Text = "⬡ ATM RADAR"
+RadarTitle.Font = Enum.Font.GothamBold
+RadarTitle.TextSize = 13
+RadarTitle.TextColor3 = Color3.fromRGB(56, 236, 131)
+RadarTitle.TextXAlignment = Enum.TextXAlignment.Center
+RadarTitle.Parent = RadarFrame
+
+local RadarCounter = Instance.new("TextLabel")
+RadarCounter.Size = UDim2.new(1, 0, 0, 18)
+RadarCounter.Position = UDim2.new(0, 0, 0, 26)
+RadarCounter.BackgroundTransparency = 1
+RadarCounter.Text = "0 vivos / 0 rotos"
+RadarCounter.Font = Enum.Font.Gotham
+RadarCounter.TextSize = 11
+RadarCounter.TextColor3 = Color3.fromRGB(150, 150, 150)
+RadarCounter.TextXAlignment = Enum.TextXAlignment.Center
+RadarCounter.Parent = RadarFrame
+
+local RadarBg = Instance.new("Frame")
+RadarBg.Name = "RadarBg"
+RadarBg.Size = UDim2.new(0, RADAR_SIZE, 0, RADAR_SIZE)
+RadarBg.Position = UDim2.new(0.5, -RADAR_SIZE/2, 0, 46)
+RadarBg.BackgroundColor3 = Color3.fromRGB(6, 18, 10)
+RadarBg.BorderSizePixel = 0
+RadarBg.ClipsDescendants = true
+RadarBg.Parent = RadarFrame
+Instance.new("UICorner", RadarBg).CornerRadius = UDim.new(0.5, 0)
+
+local RadarCircleStroke = Instance.new("UIStroke", RadarBg)
+RadarCircleStroke.Thickness = 1.5
+RadarCircleStroke.Color = Color3.fromRGB(56, 236, 131)
+RadarCircleStroke.Transparency = 0.5
+
+local RadarLineH = Instance.new("Frame")
+RadarLineH.BackgroundColor3 = Color3.fromRGB(56, 236, 131)
+RadarLineH.BackgroundTransparency = 0.85
+RadarLineH.BorderSizePixel = 0
+RadarLineH.Size = UDim2.new(1, 0, 0, 1)
+RadarLineH.Position = UDim2.new(0, 0, 0.5, 0)
+RadarLineH.Parent = RadarBg
+
+local RadarLineV = Instance.new("Frame")
+RadarLineV.BackgroundColor3 = Color3.fromRGB(56, 236, 131)
+RadarLineV.BackgroundTransparency = 0.85
+RadarLineV.BorderSizePixel = 0
+RadarLineV.Size = UDim2.new(0, 1, 1, 0)
+RadarLineV.Position = UDim2.new(0.5, 0, 0, 0)
+RadarLineV.Parent = RadarBg
+
+local InnerCircle = Instance.new("Frame")
+InnerCircle.Size = UDim2.new(0.5, 0, 0.5, 0)
+InnerCircle.Position = UDim2.new(0.25, 0, 0.25, 0)
+InnerCircle.BackgroundTransparency = 1
+InnerCircle.BorderSizePixel = 0
+InnerCircle.Parent = RadarBg
+local InnerStroke = Instance.new("UIStroke", InnerCircle)
+InnerStroke.Thickness = 1
+InnerStroke.Color = Color3.fromRGB(56, 236, 131)
+InnerStroke.Transparency = 0.8
+Instance.new("UICorner", InnerCircle).CornerRadius = UDim.new(0.5, 0)
+
+local PlayerDot = Instance.new("Frame")
+PlayerDot.Name = "PlayerDot"
+PlayerDot.Size = UDim2.new(0, 8, 0, 8)
+PlayerDot.AnchorPoint = Vector2.new(0.5, 0.5)
+PlayerDot.Position = UDim2.new(0.5, 0, 0.5, 0)
+PlayerDot.BackgroundColor3 = Color3.fromRGB(255, 230, 50)
+PlayerDot.BorderSizePixel = 0
+PlayerDot.ZIndex = 10
+PlayerDot.Parent = RadarBg
+Instance.new("UICorner", PlayerDot).CornerRadius = UDim.new(0.5, 0)
+
+local PlayerGlow = Instance.new("Frame")
+PlayerGlow.Size = UDim2.new(0, 16, 0, 16)
+PlayerGlow.AnchorPoint = Vector2.new(0.5, 0.5)
+PlayerGlow.Position = UDim2.new(0.5, 0, 0.5, 0)
+PlayerGlow.BackgroundColor3 = Color3.fromRGB(255, 230, 50)
+PlayerGlow.BackgroundTransparency = 0.65
+PlayerGlow.BorderSizePixel = 0
+PlayerGlow.ZIndex = 9
+PlayerGlow.Parent = RadarBg
+Instance.new("UICorner", PlayerGlow).CornerRadius = UDim.new(0.5, 0)
+
+-- Punto del NPC Hood Kicks (casita)
+local HoodKicksDot = Instance.new("TextLabel")
+HoodKicksDot.Name = "HoodKicksDot"
+HoodKicksDot.Size = UDim2.new(0, 20, 0, 20)
+HoodKicksDot.AnchorPoint = Vector2.new(0.5, 0.5)
+HoodKicksDot.Position = UDim2.new(0.5, 0, 0.5, 0)
+HoodKicksDot.BackgroundTransparency = 1
+HoodKicksDot.Text = "🏠"
+HoodKicksDot.TextSize = 14
+HoodKicksDot.ZIndex = 8
+HoodKicksDot.Visible = false
+HoodKicksDot.Parent = RadarBg
+
+local LegendFrame = Instance.new("Frame")
+LegendFrame.Size = UDim2.new(1, -10, 0, 18)
+LegendFrame.Position = UDim2.new(0, 5, 1, -20)
+LegendFrame.BackgroundTransparency = 1
+LegendFrame.Parent = RadarFrame
+
+local LegendVivo = Instance.new("TextLabel")
+LegendVivo.Size = UDim2.new(0.33, 0, 1, 0)
+LegendVivo.Position = UDim2.new(0, 0, 0, 0)
+LegendVivo.BackgroundTransparency = 1
+LegendVivo.Text = "● Vivo"
+LegendVivo.Font = Enum.Font.Gotham
+LegendVivo.TextSize = 11
+LegendVivo.TextColor3 = Color3.fromRGB(56, 236, 131)
+LegendVivo.TextXAlignment = Enum.TextXAlignment.Center
+LegendVivo.Parent = LegendFrame
+
+local LegendRoto = Instance.new("TextLabel")
+LegendRoto.Size = UDim2.new(0.33, 0, 1, 0)
+LegendRoto.Position = UDim2.new(0.33, 0, 0, 0)
+LegendRoto.BackgroundTransparency = 1
+LegendRoto.Text = "● Roto"
+LegendRoto.Font = Enum.Font.Gotham
+LegendRoto.TextSize = 11
+LegendRoto.TextColor3 = Color3.fromRGB(255, 70, 70)
+LegendRoto.TextXAlignment = Enum.TextXAlignment.Center
+LegendRoto.Parent = LegendFrame
+
+local LegendHood = Instance.new("TextLabel")
+LegendHood.Size = UDim2.new(0.33, 0, 1, 0)
+LegendHood.Position = UDim2.new(0.66, 0, 0, 0)
+LegendHood.BackgroundTransparency = 1
+LegendHood.Text = "🏠 Kicks"
+LegendHood.Font = Enum.Font.Gotham
+LegendHood.TextSize = 11
+LegendHood.TextColor3 = Color3.fromRGB(255, 200, 50)
+LegendHood.TextXAlignment = Enum.TextXAlignment.Center
+LegendHood.Parent = LegendFrame
+
+
+-- ============= LÓGICA DEL RADAR =============
+local radarDots = {}
+
+local function crearPuntoCajero(id)
+    local dot = Instance.new("Frame")
+    dot.Name = "ATMDot_" .. id
+    dot.Size = UDim2.new(0, RADAR_DOT_SIZE, 0, RADAR_DOT_SIZE)
+    dot.AnchorPoint = Vector2.new(0.5, 0.5)
+    dot.Position = UDim2.new(0.5, 0, 0.5, 0)
+    dot.BackgroundColor3 = Color3.fromRGB(56, 236, 131)
+    dot.BorderSizePixel = 0
+    dot.ZIndex = 5
+    dot.Parent = RadarBg
+    Instance.new("UICorner", dot).CornerRadius = UDim.new(0.5, 0)
+
+    local glow = Instance.new("Frame")
+    glow.Size = UDim2.new(0, RADAR_DOT_SIZE + 6, 0, RADAR_DOT_SIZE + 6)
+    glow.AnchorPoint = Vector2.new(0.5, 0.5)
+    glow.Position = UDim2.new(0.5, 0, 0.5, 0)
+    glow.BackgroundColor3 = Color3.fromRGB(56, 236, 131)
+    glow.BackgroundTransparency = 0.6
+    glow.BorderSizePixel = 0
+    glow.ZIndex = 4
+    glow.Parent = RadarBg
+    Instance.new("UICorner", glow).CornerRadius = UDim.new(0.5, 0)
+
+    return dot, glow
+end
+
+task.spawn(function()
+    task.wait(3)
+
+    local cashiersFolder = workspace:WaitForChild("Cashiers", 10)
+    if not cashiersFolder then return end
+
+    for _, cajero in ipairs(cashiersFolder:GetChildren()) do
+        if cajero.Name == "VAULT" then continue end
+        if not cajero:FindFirstChild("Head") then continue end
+
+        local dot, glow = crearPuntoCajero(tostring(math.random(100000)))
+        radarDots[cajero] = { dot = dot, glow = glow, alive = true }
+    end
+
+    RunService.Heartbeat:Connect(function(dt)
+        local char = player.Character
+        if not char then return end
+        local root = char:FindFirstChild("HumanoidRootPart")
+        if not root then return end
+        local playerPos = root.Position
+
+        local contVivos = 0
+        local contRotos = 0
+
+        for cajero, data in pairs(radarDots) do
+            if not cajero or not cajero.Parent then
+                pcall(function() data.dot:Destroy() end)
+                pcall(function() data.glow:Destroy() end)
+                radarDots[cajero] = nil
+                continue
+            end
+
+            local head = cajero:FindFirstChild("Head")
+            local humanoid = cajero:FindFirstChild("Humanoid")
+
+            if not head or not humanoid then
+                data.dot.Visible = false
+                data.glow.Visible = false
+                continue
+            end
+
+            local estaVivo = humanoid.Health > 0
+            local cajeroPos = head.Position
+
+            if estaVivo then
+                contVivos = contVivos + 1
+            else
+                contRotos = contRotos + 1
+            end
+
+            local dx = cajeroPos.X - playerPos.X
+            local dz = cajeroPos.Z - playerPos.Z
+            local dist = math.sqrt(dx*dx + dz*dz)
+
+            if dist > RADAR_RANGE then
+                local escala = RADAR_RANGE / dist
+                dx = dx * escala
+                dz = dz * escala
+            end
+
+            local nx = 0.5 + (dx / RADAR_RANGE) * 0.5
+            local ny = 0.5 + (dz / RADAR_RANGE) * 0.5
+
+            local cx = nx - 0.5
+            local cy = ny - 0.5
+            local mag = math.sqrt(cx*cx + cy*cy)
+            if mag > 0.46 then
+                local norm = 0.46 / mag
+                cx = cx * norm
+                cy = cy * norm
+            end
+
+            data.dot.Position = UDim2.new(0.5 + cx, 0, 0.5 + cy, 0)
+            data.glow.Position = UDim2.new(0.5 + cx, 0, 0.5 + cy, 0)
+            data.dot.Visible = true
+            data.glow.Visible = true
+
+            if estaVivo then
+                data.alive = true
+                data.dot.BackgroundColor3 = Color3.fromRGB(56, 236, 131)
+                data.glow.BackgroundColor3 = Color3.fromRGB(56, 236, 131)
+                data.glow.BackgroundTransparency = 0.65
+                data.dot.Size = UDim2.new(0, RADAR_DOT_SIZE, 0, RADAR_DOT_SIZE)
+                data.glow.Size = UDim2.new(0, RADAR_DOT_SIZE + 6, 0, RADAR_DOT_SIZE + 6)
+            else
+                data.alive = false
+                data.dot.BackgroundColor3 = Color3.fromRGB(255, 65, 65)
+                data.glow.BackgroundColor3 = Color3.fromRGB(255, 65, 65)
+                data.glow.BackgroundTransparency = 0.78
+                data.dot.Size = UDim2.new(0, RADAR_DOT_SIZE - 2, 0, RADAR_DOT_SIZE - 2)
+                data.glow.Size = UDim2.new(0, RADAR_DOT_SIZE + 2, 0, RADAR_DOT_SIZE + 2)
+            end
+        end
+
+        RadarCounter.Text = contVivos .. " vivos  /  " .. contRotos .. " rotos"
+        if contVivos == 0 and contRotos == 0 then
+            RadarCounter.TextColor3 = Color3.fromRGB(150, 150, 150)
+        elseif contVivos == 0 then
+            RadarCounter.TextColor3 = Color3.fromRGB(255, 65, 65)
+        elseif contRotos == 0 then
+            RadarCounter.TextColor3 = Color3.fromRGB(56, 236, 131)
+        else
+            RadarCounter.TextColor3 = Color3.fromRGB(255, 180, 50)
+        end
+    end)
+
+    cashiersFolder.ChildAdded:Connect(function(cajero)
+        task.wait(0.5)
+        if cajero.Name == "VAULT" then return end
+        if not cajero:FindFirstChild("Head") then return end
+        if radarDots[cajero] then return end
+
+        local dot, glow = crearPuntoCajero(tostring(math.random(100000)))
+        radarDots[cajero] = { dot = dot, glow = glow, alive = true }
+    end)
+
+cashiersFolder.ChildRemoved:Connect(function(cajero)
+        local data = radarDots[cajero]
+        if data then
+            pcall(function() data.dot:Destroy() end)
+            pcall(function() data.glow:Destroy() end)
+            radarDots[cajero] = nil
+        end
+    end)  -- ← cierra ChildRemoved
+
+    -- Actualizar posición del NPC Hood Kicks en el radar
+    RunService.Heartbeat:Connect(function()
+        local char = player.Character
+        if not char then return end
+        local root = char:FindFirstChild("HumanoidRootPart")
+        if not root then return end
+
+        local npc = workspace:FindFirstChild("Ignored") 
+            and workspace.Ignored:FindFirstChild("Clean the shoes on the floor and come to me for cash")
+        
+        if not npc then
+            HoodKicksDot.Visible = false
+            return
+        end
+
+        local npcRoot = npc:FindFirstChild("HumanoidRootPart") or npc:FindFirstChildWhichIsA("BasePart")
+        if not npcRoot then
+            HoodKicksDot.Visible = false
+            return
+        end
+
+        local playerPos = root.Position
+        local npcPos = npcRoot.Position
+        local dx = npcPos.X - playerPos.X
+        local dz = npcPos.Z - playerPos.Z
+        local dist = math.sqrt(dx*dx + dz*dz)
+
+        if dist > RADAR_RANGE then
+            local escala = RADAR_RANGE / dist
+            dx = dx * escala
+            dz = dz * escala
+        end
+
+        local cx = (dx / RADAR_RANGE) * 0.5
+        local cy = (dz / RADAR_RANGE) * 0.5
+        local mag = math.sqrt(cx*cx + cy*cy)
+        if mag > 0.46 then
+            local norm = 0.46 / mag
+            cx = cx * norm
+            cy = cy * norm
+        end
+
+        HoodKicksDot.Position = UDim2.new(0.5 + cx, 0, 0.5 + cy, 0)
+        HoodKicksDot.Visible = true
+    end)
+
+end)  -- ← cierra el task.spawn del radar
+
+local startMoney = currency.Value
+local startTime = os.time()
+
+local function fmt(n)
+	local s = tostring(n)
+	while true do
+		s, k = s:gsub("^(-?%d+)(%d%d%d)", "%1,%2")
+		if k == 0 then break end
+	end
+	return s
+end
+
+-- src/logic/buyer.lua --
+
+local Kamaik = {
+    yaProcesadoKO = false,
+    AutoFarm = {
+        isStomping = false,
+        dineroActual = player:WaitForChild("DataFolder"):WaitForChild("Currency").Value,
+        lastTarget,
+        dineroTotalRecogido = 0,
+        Core = nil,
+        TimeFarm = 0,
+        posVuelo = nil,
+        vueloThread = false,
+        vueloActivo = false,
+        lastStompTime = nil,
+        deaths = 0
+    },
+    targettp = nil,
+}
+
+-- FUNCIONES LMG SYSTEM
+local function tieneTodasLasArmas()
+    local backpack = player:FindFirstChild("Backpack")
+    local character = player.Character
+    if not backpack and not character then return false end
+
+    local encontradas = {}
+
+    if backpack then
+        for _, item in ipairs(backpack:GetChildren()) do
+            if armasNecesarias[item.Name] then
+                encontradas[item.Name] = true
+            end
+        end
+    end
+
+    if character then
+        for _, item in ipairs(character:GetChildren()) do
+            if armasNecesarias[item.Name] then
+                encontradas[item.Name] = true
+            end
+        end
+    end
+
+    for arma, _ in pairs(armasNecesarias) do
+        if not encontradas[arma] then
+            return false
+        end
+    end
+
+    return true
+end
+
+local function clickLMG()
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if not shop then return false end
+    local lmg = shop:FindFirstChild("[LMG] - $4221")
+    if not lmg then return false end
+
+    if ES_XENO and XENO_CAM_POSITIONS["LMG"] then
+        workspace.CurrentCamera.CFrame = XENO_CAM_POSITIONS["LMG"]
+        task.wait(0.1)
+    end
+
+    local clicked = false
+    local cd = lmg:FindFirstChildWhichIsA("ClickDetector", true)
+    if cd and typeof(fireclickdetector) == "function" then
+        pcall(function() fireclickdetector(cd) end)
+        clicked = true
+    end
+    for _, desc in ipairs(lmg:GetDescendants()) do
+        if desc:IsA("ProximityPrompt") then
+            pcall(function()
+                if typeof(fireproximityprompt) == "function" then
+                    fireproximityprompt(desc)
+                else
+                    desc.HoldDuration = 0
+                    desc:InputHoldBegin()
+                    task.wait(0.1)
+                    desc:InputHoldEnd()
+                end
+            end)
+            clicked = true
+        end
+    end
+    return clicked
+end
+
+local function clickAUG()
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if not shop then return false end
+    local aug = shop:FindFirstChild("[AUG] - $2195")
+    if not aug then return false end
+
+    local cd = aug:FindFirstChildWhichIsA("ClickDetector", true)
+    if not cd then
+        for _, desc in ipairs(aug:GetDescendants()) do
+            if desc:IsA("ProximityPrompt") then
+                pcall(function()
+                    if typeof(fireproximityprompt) == "function" then
+                        fireproximityprompt(desc)
+                    else
+                        desc.HoldDuration = 0
+                        desc:InputHoldBegin()
+                        task.wait(0.1)
+                        desc:InputHoldEnd()
+                    end
+                end)
+                return true
+            end
+        end
+        return false
+    end
+
+    if ES_XENO then
+        local cdPart = cd.Parent
+        local cdWorldPos = cdPart and cdPart:IsA("BasePart") 
+            and cdPart.Position 
+            or aug:FindFirstChildWhichIsA("BasePart") and aug:FindFirstChildWhichIsA("BasePart").Position
+            or Vector3.new(-279.3803, 46, -242.8080)
+
+        local camOffset = Vector3.new(0, 2, 5)
+        local targetCamCFrame = CFrame.new(cdWorldPos + camOffset, cdWorldPos)
+
+        local mantenerCam = true
+        local camThread = task.spawn(function()
+            while mantenerCam do
+                workspace.CurrentCamera.CFrame = targetCamCFrame
+                task.wait()
+            end
+        end)
+
+        task.wait(0.15)
+
+        local clicked = false
+        local ok = pcall(function() fireclickdetector(cd) end)
+        if ok then clicked = true end
+
+        mantenerCam = false
+
+        return clicked
+    else
+        local clicked = false
+        if typeof(fireclickdetector) == "function" then
+            pcall(function() fireclickdetector(cd) end)
+            clicked = true
+        end
+        for _, desc in ipairs(aug:GetDescendants()) do
+            if desc:IsA("ProximityPrompt") then
+                pcall(function()
+                    if typeof(fireproximityprompt) == "function" then
+                        fireproximityprompt(desc)
+                    else
+                        desc.HoldDuration = 0
+                        desc:InputHoldBegin()
+                        task.wait(0.1)
+                        desc:InputHoldEnd()
+                    end
+                end)
+                clicked = true
+            end
+        end
+        return clicked
+    end
+end
+
+function limpiarVuelo()
+    Kamaik.AutoFarm.vueloActivo = false
+    Kamaik.AutoFarm.posVuelo = nil
+    Kamaik.AutoFarm.vueloThread = false
+
+    if workspace:FindFirstChild("Core") then
+        workspace.Core:Destroy()
+    end
+
+    local char = player.Character
+    if char then
+        local root = char:FindFirstChild("HumanoidRootPart")
+        if root then root.CanCollide = true end
+        local humanoid = char:FindFirstChild("Humanoid")
+        if humanoid then humanoid.PlatformStand = false end
+    end
+end
+
+function activarVueloNuevo(targetCFrame, anguloOpcional)
+    local player = game.Players.LocalPlayer
+    local character = player.Character or player.CharacterAdded:Wait()
+    local root = character:WaitForChild("HumanoidRootPart")
+
+    if anguloOpcional then
+        local posicion = targetCFrame.Position
+        targetCFrame = CFrame.new(posicion) * CFrame.Angles(0, math.rad(anguloOpcional), 0)
+    end
+
+    root.CFrame = targetCFrame
+    root.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+    root.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+    
+    local humanoid = character:WaitForChild("Humanoid")
+    humanoid:ChangeState(Enum.HumanoidStateType.Landed)
+    
+    Kamaik.targettp = targetCFrame
+    limpiarVuelo()
+    task.wait(0.1)
+
+    if workspace:FindFirstChild("Core") then
+        workspace.Core:Destroy()
+    end
+
+    local Core = Instance.new("Part")
+    Core.Name = "Core"
+    Core.Size = Vector3.new(0.05, 0.05, 0.05)
+    Core.Anchored = false
+    Core.CanCollide = false
+    Core.Transparency = 1
+    Core.Parent = workspace
+
+    local weld = Instance.new("Weld", Core)
+    weld.Part0 = Core
+    weld.Part1 = character:WaitForChild("LowerTorso")
+    weld.C0 = CFrame.new(0, 0, 0)
+
+    local torso = Core
+    Kamaik.AutoFarm.vueloActivo = true
+    Kamaik.AutoFarm.Core = Core
+    Kamaik.AutoFarm.vueloThread = true
+
+    root.CanCollide = false
+    humanoid.PlatformStand = true
+
+    task.spawn(function()
+        local pos = Instance.new("BodyPosition", torso)
+        local gyro = Instance.new("BodyGyro", torso)
+        pos.Name = "EPIXPOS"
+        pos.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+        pos.Position = targetCFrame.Position
+        gyro.MaxTorque = Vector3.new(9e9, 9e9, 9e9)
+        gyro.CFrame = targetCFrame
+
+        while Kamaik.AutoFarm.vueloActivo do
+            if root then
+                root.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+                root.CFrame = Kamaik.targettp
+            end
+            
+            pos.Position = Kamaik.targettp.Position
+            gyro.CFrame = Kamaik.targettp
+            task.wait()
+        end
+    end)
+end
+
+local function attemptGetArmas(timeoutSeconds)
+    timeoutSeconds = timeoutSeconds or 30
+    local character = player.Character or player.CharacterAdded:Wait()
+    local HRP = character:WaitForChild("HumanoidRootPart")
+    
+    local augTP = Vector3.new(-273.05, 39, -213.31)
+    local targetCFrame = CFrame.new(augTP + Vector3.new(0, 3, 0))
+    
+    pcall(function()
+        activarVueloNuevo(targetCFrame)
+    end)
+    task.wait(1.5)
+
+    local startTime = tick()
+    local intentosAUG = 0
+    while not player.Backpack:FindFirstChild("[AUG]") and (tick() - startTime) < timeoutSeconds do
+        intentosAUG = intentosAUG + 1
+        if ES_XENO and intentosAUG % 3 == 0 then
+            pcall(function() activarVueloNuevo(targetCFrame) end)
+            task.wait(0.8)
+        end
+        clickAUG()
+        task.wait(0.8)
+    end
+    
+    local lmgTP = Vector3.new(-620.8822631835938, 10, -305.3392639160156)
+    targetCFrame = CFrame.new(lmgTP + Vector3.new(0, 3, 0))
+    
+    pcall(function()
+        activarVueloNuevo(targetCFrame)
+    end)
+    
+    startTime = tick()
+    while not player.Backpack:FindFirstChild("[LMG]") and (tick() - startTime) < timeoutSeconds do
+        task.wait(1)
+        clickLMG()
+    end
+
+    return tieneTodasLasArmas()
+end
+
+local function equiparArma(nombreArma)
+    local char = player.Character
+    if not char then return false end
+    
+    local charHumanoid = char:FindFirstChildOfClass("Humanoid")
+    if not charHumanoid then return false end
+    
+    local armaTool = char:FindFirstChild(nombreArma)
+    if armaTool then return true end
+    
+    local aug = player.Backpack:FindFirstChild("[AUG]")
+    local lmg = player.Backpack:FindFirstChild("[LMG]")
+    
+    if not aug or not lmg then 
+        local backpackArma = player.Backpack:FindFirstChild(nombreArma)
+        if backpackArma then
+            charHumanoid:EquipTool(backpackArma)
+            task.wait(0.5)
+            return char:FindFirstChild(nombreArma) ~= nil
+        end
+        return false
+    end
+    
+    if nombreArma == "[LMG]" then
+        aug.Parent = char
+        lmg.Parent = char
+    else
+        lmg.Parent = char
+        aug.Parent = char
+    end
+    
+    task.wait(0.3)
+    return char:FindFirstChild(nombreArma) ~= nil
+end
+
+local function obtenerBalas(nombreArma)
+    nombreArma = nombreArma or armaActual or "[LMG]"
+    local tool = player.Character:FindFirstChild(nombreArma)
+    if tool then
+        local ammoVal = tool:FindFirstChild("Ammo") or tool:FindFirstChild("Clip") or tool:FindFirstChild("Bullets")
+        if ammoVal and ammoVal:IsA("IntValue") then
+            return ammoVal.Value, ammoVal
+        end
+    end
+    return nil, nil
+end
+
+local function recargar(nombreArma)
+    nombreArma = nombreArma or armaActual or "[LMG]"
+    local tool = player.Character:FindFirstChild(nombreArma)
+    if tool then
+        mainEvent:FireServer("Reload", tool)
+        
+        task.spawn(function()
+            local startTime = tick()
+            while (tick() - startTime) < 7 do
+                task.wait(0.5)
+                local balas = obtenerBalas(nombreArma)
+                if balas and balas > 20 then
+                    return true
+                end
+            end
+            Status.Text = "Reload failed - buying " .. nombreArma .. " ammo..."
+            if nombreArma == "[LMG]" then
+                comprarAmmo()
+            elseif nombreArma == "[AUG]" then
+                comprarAmmoAUG()
+            end
+        end)
+        
+        return true
+    end
+    return false
+end
+
+local function clickAmmo()
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if not shop then return false end
+    local ammo = shop:FindFirstChild("200 [LMG Ammo] - $338")
+    if not ammo then return false end
+
+    local clicked = false
+    local cd = ammo:FindFirstChildWhichIsA("ClickDetector", true)
+    if cd and typeof(fireclickdetector) == "function" then
+        pcall(function() fireclickdetector(cd) end)
+        clicked = true
+    end
+    for _, desc in ipairs(ammo:GetDescendants()) do
+        if desc:IsA("ProximityPrompt") then
+            pcall(function()
+                if typeof(fireproximityprompt) == "function" then
+                    fireproximityprompt(desc)
+                else
+                    desc.HoldDuration = 0
+                    desc:InputHoldBegin()
+                    task.wait(0.1)
+                    desc:InputHoldEnd()
+                end
+            end)
+            clicked = true
+        end
+    end
+    return clicked
+end
+
+local function clickAmmoAUG()
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if not shop then return false end
+    local ammo = shop:FindFirstChild("90 [AUG Ammo] - $90")
+    if not ammo then return false end
+
+    local clicked = false
+    local cd = ammo:FindFirstChildWhichIsA("ClickDetector", true)
+    if cd and typeof(fireclickdetector) == "function" then
+        pcall(function() fireclickdetector(cd) end)
+        clicked = true
+    end
+    for _, desc in ipairs(ammo:GetDescendants()) do
+        if desc:IsA("ProximityPrompt") then
+            pcall(function()
+                if typeof(fireproximityprompt) == "function" then
+                    fireproximityprompt(desc)
+                else
+                    desc.HoldDuration = 0
+                    desc:InputHoldBegin()
+                    task.wait(0.1)
+                    desc:InputHoldEnd()
+                end
+            end)
+            clicked = true
+        end
+    end
+    return clicked
+end
+
+local function teleportWithRandomFall()
+    limpiarVuelo()
+    local char = player.Character or player.CharacterAdded:Wait()
+    if not char then return end
+    
+    local root = char:FindFirstChild("HumanoidRootPart")
+    if not root then return end
+    
+    local randomPosition = Vector3.new(
+        math.random(-38000000, 38000000), 
+        math.random(0, 20000000), 
+        math.random(-38000000, 38000000)
+    )
+    
+    root.CFrame = CFrame.new(randomPosition)
+    
+    local humanoid = char:FindFirstChildOfClass("Humanoid")
+    if humanoid then 
+        humanoid:ChangeState(Enum.HumanoidStateType.Freefall) 
+    end
+end
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- Constantes de munición
+-- ═══════════════════════════════════════════════════════════════════════════
+local LMG_MAX_AMMO = 2800   -- 14 packs × 200 balas
+local AUG_MAX_AMMO = 900    -- 10 packs × 90 balas
+local LMG_PACK_SIZE = 200
+local AUG_PACK_SIZE = 90
+local LMG_UMBRAL_COMPRA = 400   -- Solo compra si tiene menos de 400 balas LMG
+local AUG_UMBRAL_COMPRA = 180   -- Solo compra si tiene menos de 180 balas AUG
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- comprarAmmo: calcula cuántos packs necesita y no compra de más
+-- ═══════════════════════════════════════════════════════════════════════════
+local function comprarAmmo()
+    if Kamaik.AutoFarm.isStomping then return false end
+
+    -- Verificar cuántas balas LMG tiene actualmente
+    local balasActuales = 0
+    local toolCheck = player.Backpack:FindFirstChild("[LMG]") or (player.Character and player.Character:FindFirstChild("[LMG]"))
+    if toolCheck then
+        local ammoVal = toolCheck:FindFirstChild("Ammo") or toolCheck:FindFirstChild("Clip") or toolCheck:FindFirstChild("Bullets")
+        if ammoVal then balasActuales = ammoVal.Value end
+    end
+
+    -- Si tiene suficientes balas, no comprar
+    if balasActuales >= LMG_UMBRAL_COMPRA then
+        Status.Text = "LMG ammo sufficient (" .. balasActuales .. ") - skipping purchase"
+        return true
+    end
+
+    -- Calcular cuántos packs necesita
+    local balasNecesarias = LMG_MAX_AMMO - balasActuales
+    local packsNecesarios = math.ceil(balasNecesarias / LMG_PACK_SIZE)
+    packsNecesarios = math.max(1, math.min(packsNecesarios, 14))
+
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    
+    if humanoid then
+        humanoid:UnequipTools()
+        task.wait(0.3)
+    end
+    
+    -- Ir a la tienda de munición LMG
+    local ammoTP = Vector3.new(-616.1832120117188, 10, -305.33917236328125)
+    activarVueloNuevo(CFrame.new(ammoTP + Vector3.new(0, 3, 0)))
+    task.wait(1)
+    
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if not shop then 
+        Status.Text = "Error - Shop not found"
+        return false 
+    end
+    
+    local ammo = shop:FindFirstChild("200 [LMG Ammo] - $338")
+    if not ammo then 
+        Status.Text = "LMG ammo not found"
+        return false 
+    end
+    
+    local detenerCamara = nil
+    if ES_XENO and XENO_CAM_POSITIONS["LMG_AMMO"] then
+        detenerCamara = forzarCamaraXeno("LMG_AMMO")
+        task.wait(0.3)
+    end
+    
+    local comprasExitosas = 0
+    
+    for i = 1, packsNecesarios do
+        Status.Text = "Buying LMG ammo (" .. i .. "/" .. packsNecesarios .. ") - had " .. balasActuales .. " rounds"
+        clickAmmo()
+        comprasExitosas = comprasExitosas + 1
+        task.wait(0.3)
+    end
+    
+    if detenerCamara then detenerCamara() end
+    
+    Status.Text = "Bought " .. comprasExitosas .. " LMG packs - Waiting in safe zone..."
+
+    -- Ir a zona segura y esperar quieto hasta que recargue
+    activarVueloNuevo(CFrame.new(ZONA_ESPERA_SEGURA))
+    task.wait(0.8)
+    
+    if equiparArma("[LMG]") then
+        task.wait(0.3)
+        recargar("[LMG]")
+        Status.Text = "Reloading LMG in safe zone..."
+        task.wait(3)
+    end
+    
+    Status.Text = "LMG ready!"
+    return true
+end
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- comprarAmmoAUG: calcula cuántos packs necesita y no compra de más
+-- ═══════════════════════════════════════════════════════════════════════════
+local function comprarAmmoAUG()
+    if Kamaik.AutoFarm.isStomping then return false end
+
+    -- Verificar cuántas balas AUG tiene actualmente
+    local balasActuales = 0
+    local toolCheck = player.Backpack:FindFirstChild("[AUG]") or (player.Character and player.Character:FindFirstChild("[AUG]"))
+    if toolCheck then
+        local ammoVal = toolCheck:FindFirstChild("Ammo") or toolCheck:FindFirstChild("Clip") or toolCheck:FindFirstChild("Bullets")
+        if ammoVal then balasActuales = ammoVal.Value end
+    end
+
+    -- Si tiene suficientes balas, no comprar
+    if balasActuales >= AUG_UMBRAL_COMPRA then
+        Status.Text = "AUG ammo sufficient (" .. balasActuales .. ") - skipping purchase"
+        return true
+    end
+
+    -- Calcular cuántos packs necesita
+    local balasNecesarias = AUG_MAX_AMMO - balasActuales
+    local packsNecesarios = math.ceil(balasNecesarias / AUG_PACK_SIZE)
+    packsNecesarios = math.max(1, math.min(packsNecesarios, 10))
+
+    local character = player.Character or player.CharacterAdded:Wait()
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    
+    if humanoid then
+        humanoid:UnequipTools()
+        task.wait(0.3)
+    end
+    
+    -- Ir a la tienda de munición AUG
+    local ammoTP = Vector3.new(-278.03, 39, -213.39)
+    activarVueloNuevo(CFrame.new(ammoTP + Vector3.new(0, 3, 0)))
+    task.wait(1)
+    
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if not shop then return false end
+    
+    local ammo = shop:FindFirstChild("90 [AUG Ammo] - $90")
+    if not ammo then return false end
+    
+    local detenerCamara = nil
+    if ES_XENO and XENO_CAM_POSITIONS["AUG_AMMO"] then
+        detenerCamara = forzarCamaraXeno("AUG_AMMO")
+        task.wait(0.3)
+    end
+    
+    local comprasExitosas = 0
+    
+    for i = 1, packsNecesarios do
+        Status.Text = "Buying AUG ammo (" .. i .. "/" .. packsNecesarios .. ") - had " .. balasActuales .. " rounds"
+        clickAmmoAUG()
+        comprasExitosas = comprasExitosas + 1
+        task.wait(0.3)
+    end
+    
+    if detenerCamara then detenerCamara() end
+    
+    Status.Text = "Bought " .. comprasExitosas .. " AUG packs - Waiting in safe zone..."
+
+    -- Ir a zona segura y esperar quieto hasta que recargue
+    activarVueloNuevo(CFrame.new(ZONA_ESPERA_SEGURA))
+    task.wait(0.8)
+    
+    if equiparArma("[AUG]") then
+        task.wait(0.3)
+        recargar("[AUG]")
+        Status.Text = "Reloading AUG in safe zone..."
+        task.wait(3)
+    end
+    
+    Status.Text = "AUG ready!"
+    return true
+end
+
+-- ============= SISTEMA ANTI-JAIL =============
+local function verificarYRecargarArmas()
+    local char = player.Character
+    if not char then return false end
+    
+    if not tieneTodasLasArmas() then
+        Status.Text = "Anti-Jail: Getting weapons..."
+        if not attemptGetArmas() then
+            return false
+        end
+        task.wait(0.5)
+    end
+    
+    if not equiparArma("[LMG]") then
+        return false
+    end
+    
+    task.wait(0.3)
+    local balas = obtenerBalas("[LMG]")
+    if not balas or balas <= 0 then
+        Status.Text = "Anti-Jail: Reloading..."
+        recargar("[LMG]")
+        task.wait(2)
+        
+        local nuevasBalas = obtenerBalas("[LMG]")
+        if not nuevasBalas or nuevasBalas <= 0 then
+            Status.Text = "Anti-Jail: Buying Ammo..."
+            comprarAmmo()
+            task.wait(3)
+            recargar("[LMG]")
+            task.wait(1)
+        end
+    end
+    
+    return true
+end
+
+local function clickKey()
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if not shop then 
+        return false 
+    end
+    
+    local keyItem = shop:FindFirstChild("[Key] - $141")
+    if not keyItem then 
+        return false 
+    end
+
+    local clicked = false
+    
+    for _, desc in ipairs(keyItem:GetDescendants()) do
+        if desc:IsA("ClickDetector") then
+            if typeof(fireclickdetector) == "function" then
+                local success = pcall(function() 
+                    fireclickdetector(desc) 
+                end)
+                if success then
+                    clicked = true
+                    break
+                end
+            end
+        end
+    end
+    
+    if not clicked then
+        for _, desc in ipairs(keyItem:GetDescendants()) do
+            if desc:IsA("ProximityPrompt") then
+                pcall(function()
+                    if typeof(fireproximityprompt) == "function" then
+                        fireproximityprompt(desc)
+                    else
+                        desc.HoldDuration = 0
+                        desc:InputHoldBegin()
+                        task.wait(0.1)
+                        desc:InputHoldEnd()
+                    end
+                end)
+                clicked = true
+                break
+            end
+        end
+    end
+    
+    return clicked
+end
+
+local function stopAutoShoot()
+    isAutoShooting = false
+    currentTarget = nil
+end
+
+local function checkJailStatus()
+    local df = player:FindFirstChild("DataFolder")
+    local info = df and df:FindFirstChild("Information")
+    local jailValue = info and info:FindFirstChild("Jail")
+    
+    if jailValue then
+        local jailTime = tonumber(jailValue.Value)
+        if jailTime and jailTime > 0 then
+            return true, jailTime
+        end
+    end
+    
+    return false, 0
+end
+
+-- ============= SISTEMA DE MASK =============
+local function tieneMaskEquipada()
+    local char = player.Character
+    if not char then return false end
+    return char:FindFirstChild("In-gameMask") ~= nil
+end
+
+local function tieneMaskEnBackpack()
+    local backpack = player:FindFirstChild("Backpack")
+    if not backpack then return false end
+    return backpack:FindFirstChild("[Mask]") ~= nil
+end
+
+local function clickMask()
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if not shop then return false end
+    local mask = shop:FindFirstChild("[Paintball Mask] - $68")
+    if not mask then return false end
+
+    local clicked = false
+    local cd = mask:FindFirstChildWhichIsA("ClickDetector", true)
+    if cd and typeof(fireclickdetector) == "function" then
+        pcall(function() fireclickdetector(cd) end)
+        clicked = true
+    end
+    for _, desc in ipairs(mask:GetDescendants()) do
+        if desc:IsA("ProximityPrompt") then
+            pcall(function()
+                if typeof(fireproximityprompt) == "function" then
+                    fireproximityprompt(desc)
+                else
+                    desc.HoldDuration = 0
+                    desc:InputHoldBegin()
+                    task.wait(0.1)
+                    desc:InputHoldEnd()
+                end
+            end)
+            clicked = true
+        end
+    end
+    return clicked
+end
+
+local function equiparYUsarMask()
+    if tieneMaskEquipada() then
+        Status.Text = "Mask already equipped"
+        return true
+    end
+    
+    local char = player.Character or player.CharacterAdded:Wait()
+    if not char then return false end
+    
+    local humanoid = char:WaitForChild("Humanoid", 5)
+    if not humanoid then return false end
+    
+    local backpack = player:WaitForChild("Backpack", 5)
+    if not backpack then return false end
+    
+    local maskTool = backpack:FindFirstChild("[Mask]")
+    
+    if not maskTool then
+        Status.Text = "Buying mask..."
+        local maskPos = Vector3.new(-215.077, 18.889, -831.205)
+        activarVueloNuevo(CFrame.new(maskPos + Vector3.new(0, 3, 0)))
+        task.wait(1.5)
+        
+        local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+        if not shop then
+            Status.Text = "Shop not loaded - retrying mask later..."
+            return false
+        end
+        
+        for i = 1, 8 do
+            clickMask()
+            task.wait(0.6)
+            if player.Backpack:FindFirstChild("[Mask]") then
+                Status.Text = "Mask purchased!"
+                break
+            end
+        end
+        
+        maskTool = player.Backpack:FindFirstChild("[Mask]")
+        if not maskTool then
+            Status.Text = "Failed to buy mask - will retry"
+            return false
+        end
+    end
+    
+    Status.Text = "Equipping mask..."
+    teleportWithRandomFall()
+    task.wait(1.5)
+    
+    char = player.Character or player.CharacterAdded:Wait()
+    if not char then return false end
+    
+    humanoid = char:WaitForChild("Humanoid", 5)
+    if not humanoid then return false end
+    
+    backpack = player:FindFirstChild("Backpack")
+    maskTool = backpack and backpack:FindFirstChild("[Mask]")
+    
+    if not maskTool then
+        Status.Text = "Mask lost during teleport"
+        return false
+    end
+    
+    humanoid:EquipTool(maskTool)
+    task.wait(0.5)
+    
+    local intentos = 0
+    while not tieneMaskEquipada() and intentos < 25 do
+        char = player.Character
+        if not char then break end
+        
+        local toolEnMano = char:FindFirstChild("[Mask]")
+        if toolEnMano then
+            toolEnMano:Activate()
+        else
+            local backpackMask = player.Backpack:FindFirstChild("[Mask]")
+            if backpackMask and char:FindFirstChildOfClass("Humanoid") then
+                char.Humanoid:EquipTool(backpackMask)
+            end
+        end
+        task.wait(0.4)
+        intentos = intentos + 1
+    end
+    
+    if tieneMaskEquipada() then
+        Status.Text = "Mask equipped successfully!"
+        return true
+    else
+        Status.Text = "Failed to equip mask - will retry on respawn"
+        return false
+    end
+end
+
+local function unJailProcess()
+    if antiJailRunning then return end
+    antiJailRunning = true
+    jailProcessActive = true
+    
+    Status.Text = "Jailed, unjailing soon"
+    
+    stopAutoShoot()
+    limpiarVuelo()
+    
+    local keyTarget = workspace:FindFirstChild("Ignored") and 
+                      workspace.Ignored:FindFirstChild("Shop") and 
+                      workspace.Ignored.Shop:FindFirstChild("[Key] - $141")
+    
+    if not keyTarget or not keyTarget:FindFirstChild("Head") then
+        Status.Text = "Error - Key shop not found"
+        antiJailRunning = false
+        jailProcessActive = false
+        return
+    end
+    
+    local keyPosition = Vector3.new(-271, 24, -245)
+    local targetCFrame = CFrame.new(keyPosition + Vector3.new(0, 3, 0))
+    Status.Text = "Anti-Jail: Teleporting to key shop..."
+    
+    pcall(function()
+        activarVueloNuevo(targetCFrame)
+    end)
+    
+    task.wait(2)
+    
+    Status.Text = "Anti-Jail: Buying key..."
+    for i = 1, 5 do
+        clickKey()
+        task.wait(0.5)
+    end
+    
+    task.wait(1)
+    
+    local backpack = player:FindFirstChild("Backpack")
+    if backpack and backpack:FindFirstChild(keyItemName) then
+        local char = player.Character
+        if char then
+            local humanoid = char:FindFirstChildOfClass("Humanoid")
+            if humanoid then
+                Status.Text = "Anti-Jail: Equipping key..."
+                pcall(function()
+                    humanoid:EquipTool(backpack[keyItemName])
+                end)
+                task.wait(2)
+            end
+        end
+    end
+    
+    Status.Text = "Anti-Jail: Waiting to escape..."
+    local maxWait = 15
+    local waited = 0
+    while waited < maxWait do
+        task.wait(1)
+        waited = waited + 1
+        
+        local stillJailed, currentJailTime = checkJailStatus()
+        if not stillJailed then
+            Status.Text = "Anti-Jail: Successfully unjailed"
+            break
+        end
+    end
+    
+    local finalCheck, _ = checkJailStatus()
+    if finalCheck then
+        Status.Text = "Anti-Jail: unjail failed, restarting..."
+        antiJailRunning = false
+        jailProcessActive = false
+        task.wait(2)
+        unJailProcess()
+        return
+    end
+    
+    if verificarYRecargarArmas() then
+        Status.Text = "Anti-Jail: Ready"
+    end
+    
+    teleportWithRandomFall()
+    task.wait(2)
+    
+    antiJailRunning = false
+    jailProcessActive = false  
+end
+
+local function startAutoShoot(target)
+    if not target or not target:FindFirstChild("Head") then return end
+    
+    currentTarget = target
+    isAutoShooting = true
+    
+    local connection
+    connection = RunService.Heartbeat:Connect(function()   
+        if not currentTarget or not currentTarget.Parent or not currentTarget:FindFirstChild("Humanoid") or currentTarget.Humanoid.Health <= 0 then
+            isAutoShooting = false
+            connection:Disconnect()
+            return
+        end
+        
+        local head = currentTarget:FindFirstChild("Head")
+        if not head then
+            isAutoShooting = false
+            connection:Disconnect()
+            return
+        end
+        
+        local char = player.Character
+        if not char then return end
+        
+        local nombreArmaActual = armaActual or "[AUG]"
+        local armaTool = char:FindFirstChild(nombreArmaActual)
+        
+        if not armaTool or not armaTool:FindFirstChild("Handle") then
+            local backpackArma = player.Backpack:FindFirstChild(nombreArmaActual)
+            if backpackArma then
+                backpackArma.Parent = char
+                task.wait(0.1)
+                return
+            else
+                isAutoShooting = false
+                connection:Disconnect()
+                return
+            end
+        end
+        
+        local ok, err = pcall(function()
+            mainEvent:FireServer(
+                "ShootGun",
+                armaTool.Handle,
+                armaTool.Handle.CFrame.Position,
+                head.Position,
+                head,
+                Vector3.new(0, 0, -1)
+            )
+        end)
+    end)
+end
+
+local function autoReloadSystem()
+    task.spawn(function()
+        while true do
+            task.wait(0.5)
+            if VAULT_ROBANDO then
+                task.wait(2)
+                continue
+            end
+            if jailProcessActive then
+                task.wait(2)
+                continue
+            end
+            
+            local char = player.Character
+            if not char then
+                task.wait(1)
+                continue
+            end
+            
+            local balas, ammoVal = obtenerBalas()
+            if balas and balas == 0 then
+                Status.Text = "Reloading..."
+                
+                stopAutoShoot()
+                
+                recargar()
+                
+                local startTime = tick()
+                local recargado = false
+                
+                while (tick() - startTime) < 10 do
+                    task.wait(0.5)
+                    local nuevasBalas = obtenerBalas()
+                    if nuevasBalas and nuevasBalas > 20 then
+                        recargado = true
+                        Status.Text = "Reloading successfully"
+                        break
+                    end
+                end
+                
+                if not recargado then
+                    Status.Text = "Buying Ammo..."
+                    
+                    currentTarget = nil
+                    Kamaik.AutoFarm.lastTarget = nil
+                    stopAutoShoot()
+                    
+                    comprarAmmo()
+                    task.wait(2)
+                    recargar()
+                    
+                    task.wait(1)
+                    local balasFinales = obtenerBalas()
+                    if balasFinales and balasFinales > 0 then
+                        Status.Text = "Ammo purchased successfully"
+                    else
+                        Status.Text = "Failed to buy ammo - retrying..."
+                    end
+                end
+            end
+        end
+    end)
+end
+
+
+for _, cajero in ipairs(workspace:WaitForChild("Cashiers"):GetChildren()) do
+    if cajero:FindFirstChild("Humanoid") and cajero:FindFirstChild("Head") then
+        for _, parte in ipairs(cajero:GetDescendants()) do
+            if parte:IsA("BasePart") then
+                parte.CanCollide = false
+            end
+        end
+    end
+end
+
+local HttpService = game:GetService("HttpService")
+local req = http_request or request
+
+getgenv().AutofarmSettings = getgenv().AutofarmSettings or {}
+getgenv().AutofarmSettings["Config"]["Fps"] = getgenv().AutofarmSettings["Config"]["Fps"] or 60
+getgenv().AutofarmSettings["Webhook"] = getgenv().AutofarmSettings["Webhook"] or {}
+getgenv().AutofarmSettings["Webhook"]["URL"] = getgenv().AutofarmSettings["Webhook"]["URL"] or ""
+getgenv().AutofarmSettings["Webhook"]["Interval"] = getgenv().AutofarmSettings["Webhook"]["Interval"] or 10
+
+-- Webhook system
+task.spawn(function()
+    task.wait(35)
+    local webhookURL = getgenv().AutofarmSettings["Webhook"]["URL"]
+    local webhookInterval = getgenv().AutofarmSettings["Webhook"]["Interval"]
+
+    if webhookURL ~= "" then
+        local adjustedInterval = (webhookInterval * 60) * 1.5
+        
+        while task.wait(adjustedInterval) do
+            local thumbnailUrl = "https://tr.rbxcdn.com/30DAY-AvatarHeadshot-Png/420x420.png"
+            local success, response = pcall(function()
+                return req({
+                    Url = "https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=" .. player.UserId .. "&size=150x150&format=Png&isCircular=false",
+                    Method = "GET",
+                    Headers = { ["User-Agent"] = "Roblox" },
+                })
+            end)
+
+            if success and response.Success then
+                local data = HttpService:JSONDecode(response.Body)
+                if data and data.data and data.data[1] and data.data[1].imageUrl then
+                    thumbnailUrl = data.data[1].imageUrl
+                end
+            end
+
+            local data = {
+                avatar_url = "https://cdn.discordapp.com/attachments/1405030839393189968/1410075673715933214/da-hood-codes-july-2024_xdxa.png",
+                username = "AutoDHC",
+                embeds = {{
+                    title = "Webhook - " .. player.DisplayName,
+                    color = 5626245,
+                    timestamp = os.date("!%Y-%m-%dT%H:%M:%S.000Z"),
+                    thumbnail = { url = thumbnailUrl },
+                    fields = {
+                        { name = "Profit:", value = "```" .. FarmingReal.Text .. "```", inline = true },
+                        { name = "Wallet:", value = "```" .. NewMoneyReal.Text .. "```", inline = true },
+                        { name = "Time Elapsed:", value = "```" .. TimeDHC.Text .. "```", inline = false }
+                    }
+                }}
+            }
+
+            pcall(function()
+                req({
+                    Url = webhookURL,
+                    Method = "POST",
+                    Headers = { ["Content-Type"] = "application/json" },
+                    Body = HttpService:JSONEncode(data)
+                })
+            end)
+        end
+    end
+end)
+
+OldMoneyReal.Text = "$" .. formatWithCommas(Kamaik.AutoFarm.dineroActual)
+NewMoneyReal.Text = "$" .. formatWithCommas(Kamaik.AutoFarm.dineroActual)
+
+local dineroStats = player:WaitForChild("DataFolder"):WaitForChild("Currency")
+
+dineroStats:GetPropertyChangedSignal("Value"):Connect(function()
+    if dineroStats.Value ~= Kamaik.AutoFarm.dineroActual then
+        local diferencia = dineroStats.Value - Kamaik.AutoFarm.dineroActual
+        if diferencia > 0 then
+            Kamaik.AutoFarm.dineroTotalRecogido += diferencia
+            FarmingReal.Text = "+ $" .. formatWithCommas(Kamaik.AutoFarm.dineroTotalRecogido)
+            NewMoneyReal.Text = "$" .. formatWithCommas(dineroStats.Value)
+        end
+        Kamaik.AutoFarm.dineroActual = dineroStats.Value
+    end
+end)
+
+-- server hop
+local defaultBlacklistedIDs = {}
+
+local function getBotIDsFromAPI()
+    if not request then
+        botIDs = {}
+        return
+    end
+    
+    local success, response = pcall(function()
+        return request({
+            Url = url,
+            Method = "GET",
+            Headers = {
+                ["User-Agent"] = "Roblox/WinInet"
+            },
+            Timeout = 30
+        })
+    end)
+    
+    if not success then
+        botIDs = {}
+        return
+    end
+    
+    if not response then
+        botIDs = {}
+        return
+    end
+    
+    local isSuccess = response.Success or (response.StatusCode and response.StatusCode == 200)
+    if not isSuccess then
+        botIDs = {}
+        return
+    end
+    
+    if not response.Body or response.Body == "" then
+        botIDs = {}
+        return
+    end
+    
+    local decodeSuccess, data = pcall(function()
+        return HttpService:JSONDecode(response.Body)
+    end)
+    
+    if not decodeSuccess then
+        botIDs = {}
+        return
+    end
+    
+    if not data or not data.idsArray then
+        botIDs = {}
+        return
+    end
+    
+    botIDs = data.idsArray
+end
+getBotIDsFromAPI()
+
+local cajerosIgnorados = {
+    Vector3.new(596.3018799, 53.366783, -471.41094),
+    Vector3.new(-626.9984741, 24.90001678, -285.0621643),
+    Vector3.new(-940.498779, 24.900001, -162.76400756),
+    Vector3.new(-862.198486, 24.500015, -90.90840911),
+    Vector3.new(-937.2838745, 23.80324935, -657.3499145)
+}
+
+local cajerosInmediatos = {
+    Vector3.new(-474.3752136, 24.99999237, -292.2875671),
+    Vector3.new(-474.1751708, 25.000017166, -284.087646),
+    Vector3.new(-474.1751708, 25.000017166, -276.287841),
+    Vector3.new(95.30172729, 24.700010299, -519.1631469),
+    Vector3.new(-450.2978820, 24.900001525, -330.16424560),
+    Vector3.new(-950.89892578, 24.900001525, -162.76400756),
+    Vector3.new(-940.498779296, 24.900001525, -162.76400756)
+}
+
+local function esCajeroInmediato(posicion)
+    for _, posInmediata in ipairs(cajerosInmediatos) do
+        if (posicion - posInmediata).Magnitude < 0.5 then
+            return true
+        end
+    end
+    return false
+end
+
+local function esCajeroIgnorado(posicion)
+    for _, posIgnorada in ipairs(cajerosIgnorados) do
+        if (posicion - posIgnorada).Magnitude < 0.5 then
+            return true
+        end
+    end
+    return false
+end
+
+local function serverHop()
+    local tiempoDesdeUltimoHop = tick() - LAST_HOP_TIME
+    
+    if tiempoDesdeUltimoHop < 30 then
+        HOP_COUNT = HOP_COUNT + 1
+        if HOP_COUNT >= 3 then
+            local esperaExtra = HOP_COUNT * 15
+            Status.Text = "Cycle detected, waiting " .. esperaExtra .. "s..."
+            task.wait(esperaExtra)
+        end
+    else
+        HOP_COUNT = 0
+    end
+    
+    LAST_HOP_TIME = tick()
+    IGNORE_BOT_DETECTION_UNTIL = tick() + 60
+
+    Kamaik.yaProcesadoKO = false
+    Kamaik.AutoFarm.isStomping = false
+    Kamaik.AutoFarm.lastTarget = nil
+    Kamaik.AutoFarm.dineroTotalRecogido = 0
+    Kamaik.AutoFarm.TimeFarm = 0
+    Kamaik.AutoFarm.lastStompTime = nil
+    Kamaik.AutoFarm.deaths = 0
+
+    Kamaik.AutoFarm.dineroActual = player:WaitForChild("DataFolder"):WaitForChild("Currency").Value
+    Status.Text = "ServerHopping..."
+    
+    local delayBase = (player.UserId % 10) * 0.5
+    local delayRandom = math.random() * 3
+    local delayTotal = delayBase + delayRandom + 1
+    Status.Text = "Waiting " .. string.format("%.1f", delayTotal) .. "s..."
+    task.wait(delayTotal)
+    
+    local Player = game.Players.LocalPlayer    
+    local Http = game:GetService("HttpService")
+    local TPS = game:GetService("TeleportService")
+    local Api = "https://games.roblox.com/v1/games/"
+    
+    local _place, _id = game.PlaceId, game.JobId
+
+    local sortOrder = "Asc"
+    local minPlayers = 0
+    local maxPlayers = math.huge
+    if getgenv().AutofarmSettings.Serverhop.Type == 1 then
+        sortOrder = "Asc"
+        minPlayers = 0
+        maxPlayers = 5
+    elseif getgenv().AutofarmSettings.Serverhop.Type == 2 then
+        sortOrder = "Desc"
+        minPlayers = 6
+        maxPlayers = 25
+    else
+        sortOrder = "Asc"
+    end
+    
+    local _servers = Api .. _place .. "/servers/Public?sortOrder=" .. sortOrder .. "&limit=100"
+
+    local function ListServers(cursor)
+        local success, result = pcall(function()
+            local Raw = game:HttpGet(_servers .. ((cursor and "&cursor=" .. cursor) or ""))
+            return Http:JSONDecode(Raw)
+        end)
+        
+        if success then
+            return result
+        else
+            return nil
+        end
+    end
+
+    local blacklistedIDs = getgenv().AutofarmSettings.Serverhop.Blacklisted_IDs or {}
+    local combinedBlacklist = {}
+    
+    for _, id in ipairs(blacklistedIDs) do
+        combinedBlacklist[tostring(id)] = true
+    end
+
+    local attemptCount = 0
+    local maxAttempts = 10
+    local serversChecked = 0
+    
+    local validServers = {}
+    
+    local Next
+    repeat
+        local Servers = ListServers(Next)
+        
+        if not Servers or not Servers.data then
+            task.wait(2)
+            attemptCount = attemptCount + 1
+            if attemptCount >= maxAttempts then
+                break
+            end
+            continue
+        end
+        
+        for _, v in ipairs(Servers.data) do
+            serversChecked = serversChecked + 1
+            
+            if v.id ~= _id and v.playing < v.maxPlayers then
+                if v.playing >= minPlayers and v.playing <= maxPlayers then
+                    if not combinedBlacklist[tostring(v.id)] then
+                        if (v.maxPlayers - v.playing) >= 2 then
+                            table.insert(validServers, {
+                                id = v.id,
+                                playing = v.playing,
+                                maxPlayers = v.maxPlayers
+                            })
+                        end
+                    end
+                end
+            end
+        end
+        
+        Next = Servers.nextPageCursor
+        attemptCount = attemptCount + 1
+        
+        if #validServers >= 20 then
+            break
+        end
+        
+    until not Next and attemptCount >= 3
+
+    if #validServers == 0 then
+        Status.Text = "No server found, retrying..."
+        task.wait(5)
+        serverHop()
+        return
+    end
+
+    Status.Text = "Found " .. #validServers .. " servers..."
+    
+    local intentos = 0
+    local maxIntentos = math.min(#validServers, 10)
+    
+    local offsetInicial = (player.UserId % #validServers) + 1
+    
+    while intentos < maxIntentos and #validServers > 0 do
+        intentos = intentos + 1
+        
+        local randomIndex = ((offsetInicial + intentos + math.random(0, 2)) % #validServers) + 1
+        local serverData = validServers[randomIndex]
+        
+        table.remove(validServers, randomIndex)
+        
+        Status.Text = "Trying random server (" .. serverData.playing .. " players)..."
+        
+        local s, r = pcall(TPS.TeleportToPlaceInstance, TPS, _place, serverData.id, Player)
+        
+        if s then 
+            Status.Text = "Teleporting to server with " .. serverData.playing .. " players..."
+            task.wait(10)
+            return
+        else
+            task.wait(0.5 + math.random() * 0.5)
+        end
+    end
+
+    Status.Text = "All servers failed, retrying..."
+    task.wait(3 + math.random() * 2)
+    serverHop()
+end
+
+-- ============= SISTEMA ANTI-BOTS =============
+local jugadoresSospechosos = {}
+
+local function obtenerPosicionesCajeros()
+    local posiciones = {}
+    for coordenada, _ in pairs(cajeroConfigs) do
+        table.insert(posiciones, coordenada)
+    end
+    return posiciones
+end
+
+local function estaCercaDeCajero(posicion)
+    for coordenada, _ in pairs(cajeroConfigs) do
+        if (posicion - coordenada).Magnitude <= 20 then
+            return true
+        end
+    end
+    return false
+end
+
+local function verificarJugadorSospechoso(jugador)
+    if jugador == player then return end
+    if not ANTI_BOTS_ENABLED then return end
+    
+    local df = jugador:FindFirstChild("DataFolder")
+    local currency = df and df:FindFirstChild("Currency")
+    if not currency then return end
+    
+    local dineroAnterior = currency.Value
+    
+    local conexion
+    conexion = currency:GetPropertyChangedSignal("Value"):Connect(function()
+        local dineroActual = currency.Value
+        local diferencia = dineroActual - dineroAnterior
+        
+        if diferencia > 0 and diferencia <= 1000 then
+            local char = jugador.Character
+            if char and char:FindFirstChild("HumanoidRootPart") then
+                local pos = char.HumanoidRootPart.Position
+                if estaCercaDeCajero(pos) then
+                    jugadoresSospechosos[jugador.UserId] = (jugadoresSospechosos[jugador.UserId] or 0) + 1
+                    
+                    if jugadoresSospechosos[jugador.UserId] >= 3 then
+                        Status.Text = "Bot detected: " .. jugador.Name .. " - Hopping..."
+                        conexion:Disconnect()
+                        task.wait(1)
+                        serverHop()
+                        return
+                    end
+                end
+            end
+        end
+        
+        dineroAnterior = dineroActual
+    end)
+    
+    jugador.AncestryChanged:Connect(function()
+        if not jugador.Parent then
+            conexion:Disconnect()
+            jugadoresSospechosos[jugador.UserId] = nil
+        end
+    end)
+end
+
+for _, p in ipairs(Players:GetPlayers()) do
+    task.spawn(function()
+        verificarJugadorSospechoso(p)
+    end)
+end
+
+Players.PlayerAdded:Connect(function(newPlayer)
+    task.spawn(function()
+        task.wait(2)
+        verificarJugadorSospechoso(newPlayer)
+    end)
+end)
+
+local function checkBlacklistedPlayers()
+    if not getgenv().AutofarmSettings.Serverhop.Toggle then
+        return false
+    end
+    
+    local blacklistedIDs = getgenv().AutofarmSettings.Serverhop.Blacklisted_IDs or {}
+    local combinedBlacklist = {}
+    
+    for _, id in ipairs(defaultBlacklistedIDs) do
+        combinedBlacklist[tostring(id)] = true
+    end
+
+    for _, id in ipairs(blacklistedIDs) do
+        combinedBlacklist[tostring(id)] = true
+    end
+
+    for _, p in ipairs(Players:GetPlayers()) do
+        if p ~= game.Players.LocalPlayer and combinedBlacklist[tostring(p.UserId)] then
+            serverHop()
+            return true
+        end
+    end
+    
+    local tiempoEnServer = tick() - SCRIPT_START_TIME
+    if tiempoEnServer > ESTABLECIDO_SEGUNDOS then
+        return false
+    end
+    
+    local hayBotConIdMayor = false
+    
+    for _, p in ipairs(Players:GetPlayers()) do
+        if p ~= game.Players.LocalPlayer then
+            for _, botId in ipairs(botIDs) do
+                if tostring(p.UserId) == tostring(botId) then
+                    if p.UserId > player.UserId then
+                        hayBotConIdMayor = true
+                        break
+                    end
+                end
+            end
+        end
+        if hayBotConIdMayor then break end
+    end
+    
+    if hayBotConIdMayor then
+        Status.Text = "Alt with higher ID found, serverhopping..."
+        serverHop()
+        return true
+    end
+    
+    return false 
+end
+
+function optimizarJugador(char)
+    if not char then return end
+
+    for _, part in ipairs(char:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.Transparency = 1
+            part.CanCollide = false
+            part.CastShadow = false
+        elseif part:IsA("Decal") or part:IsA("Texture") then
+            part.Transparency = 1
+        elseif part:IsA("ParticleEmitter") or part:IsA("Trail") then
+            part.Enabled = false
+        elseif part:IsA("Sound") then
+            part.Volume = 0
+        end
+    end
+end
+
+RunService:Set3dRenderingEnabled(false)
+
+for _, plr in ipairs(game.Players:GetPlayers()) do
+    if plr.Character then
+        optimizarJugador(plr.Character)
+    end
+end
+
+Players.PlayerAdded:Connect(function(newPlayer)
+    
+    if not getgenv().AutofarmSettings.Serverhop.Toggle then
+        newPlayer.CharacterAdded:Connect(function(char)
+            task.wait(3)
+            optimizarJugador(char)
+        end)
+        if newPlayer.Character then
+            optimizarJugador(newPlayer.Character)
+        end
+        return
+    end
+    
+    local blacklistedIDs = getgenv().AutofarmSettings.Serverhop.Blacklisted_IDs or {}
+    local combinedBlacklist = {}
+
+    for _, id in ipairs(defaultBlacklistedIDs) do
+        combinedBlacklist[tostring(id)] = true
+    end
+
+    for _, id in ipairs(blacklistedIDs) do
+        combinedBlacklist[tostring(id)] = true
+    end
+
+    if combinedBlacklist[tostring(newPlayer.UserId)] then
+        task.wait(1)
+        serverHop()
+    else
+        local tiempoEnServer = tick() - SCRIPT_START_TIME
+        
+        if tiempoEnServer > ESTABLECIDO_SEGUNDOS then
+            for _, botId in ipairs(botIDs) do
+                if tostring(newPlayer.UserId) == tostring(botId) then
+                    Status.Text = "Already done - staying (they will hop)"
+                    break
+                end
+            end
+        else
+            for _, botId in ipairs(botIDs) do
+                if tostring(newPlayer.UserId) == tostring(botId) then
+                    if newPlayer.UserId > player.UserId then
+                        Status.Text = "New alt with higher ID, hopping..."
+                        task.wait(1)
+                        serverHop()
+                        return
+                    else
+                        Status.Text = "Staying..."
+                    end
+                    break
+                end
+            end
+        end
+    end
+end)
+
+local function checkDeaths()
+    if not getgenv().AutofarmSettings.Serverhop.Toggle then
+        return
+    end
+    local maxDeaths = getgenv().AutofarmSettings.Serverhop.Knocks or 0
+    if maxDeaths > 0 and Kamaik.AutoFarm.deaths >= maxDeaths then
+        Kamaik.AutoFarm.deaths = 0
+        serverHop()
+    end
+end
+
+local kickDetected = false
+local lastConnectionCheck = os.clock()
+
+local function executeServerHop()
+    if not getgenv().AutofarmSettings.Serverhop.Toggle then
+        return
+    end
+    if kickDetected then return end
+    kickDetected = true
+    
+    task.wait(0.3)
+    serverHop()
+end
+
+task.spawn(function()
+    local lastCheck = os.clock()
+    
+    game:GetService("RunService").Heartbeat:Connect(function()
+        if os.clock() - lastCheck < 0.5 then return end
+        lastCheck = os.clock()
+        
+        if not player or not player.Parent then
+            executeServerHop()
+            return
+        end
+        
+        local char = player.Character
+        if char and not char.Parent then
+            executeServerHop()
+            return
+        end
+    end)
+end)
+
+pcall(function()
+    game.CoreGui.RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+        if child.Name == "ErrorPrompt" 
+        or child.Name:find("Disconnect") 
+        or child.Name:find("Kick")
+        or child.Name:find("Error") then
+            executeServerHop()
+        end
+    end)
+end)
+
+pcall(function()
+    local mt = getrawmetatable(game)
+    if mt and setreadonly then
+        setreadonly(mt, false)
+        local oldNamecall = mt.__namecall
+        mt.__namecall = newcclosure(function(self, ...)
+            local method = getnamecallmethod()
+            if method == "Kick" and self == player then
+                executeServerHop()
+                return
+            end
+            return oldNamecall(self, ...)
+        end)
+        setreadonly(mt, true)
+    end
+end)
+
+game.Players.PlayerRemoving:Connect(function(playerWhoLeft)
+    if playerWhoLeft == player then
+        executeServerHop()
+    end
+end)
+
+player.AncestryChanged:Connect(function()
+    if not player.Parent then
+        executeServerHop()
+    end
+end)
+
+game:GetService("TeleportService").TeleportInitFailed:Connect(function(_, teleportResult)
+    if teleportResult == Enum.TeleportResult.Flooded 
+    or teleportResult == Enum.TeleportResult.Failure then
+        task.wait(2)
+        serverHop()
+    end
+end)
+
+task.spawn(function()
+    local lastPing = os.clock()
+    
+    while true do
+        task.wait(3)
+        local currentTime = os.clock()
+        local delta = currentTime - lastPing
+        
+        if delta > 10 then
+            executeServerHop()
+            break
+        end
+        
+        lastPing = currentTime
+    end
+end)
+
+local function resetCharacter()
+    if not Kamaik.yaProcesadoKO then
+        if VAULT_ROBANDO then
+            stopAutoShoot()
+        end
+        Kamaik.yaProcesadoKO = true
+        BloquedKO = true
+        Kamaik.AutoFarm.isStomping = true
+        Kamaik.AutoFarm.lastStompTime = tick()
+        limpiarVuelo()
+        
+        Kamaik.AutoFarm.deaths += 1
+        checkDeaths()
+
+        if player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.Health = 0
+        end
+    end
+end
+
+checkBlacklistedPlayers()
+
+player.CharacterAdded:Connect(function(char)
+    task.spawn(function()
+        local root = char:WaitForChild("HumanoidRootPart", 2)
+        if not root then
+            serverHop()
+            return
+        end
+        local cam = workspace.CurrentCamera
+        cam.CameraType = Enum.CameraType.Custom
+        cam.CameraSubject = char:WaitForChild("Humanoid")
+        
+        task.wait(0.5)
+        local isJailed, jailTime = checkJailStatus()
+        if isJailed then
+            Status.Text = "Anti-Jail: Jailed after respawn (" .. jailTime .. "s)"
+            unJailProcess()
+            return  
+        end
+        
+        root.CFrame = CFrame.new(0, 15000, 0)
+        task.wait(0.2)
+        teleportWithRandomFall()
+        optimizarJugador(char)
+        task.wait(4)
+        
+        if Kamaik.yaProcesadoKO then
+            task.wait(0.1)
+            Kamaik.yaProcesadoKO = false
+            Kamaik.AutoFarm.isStomping = false
+            Status.Text = "Respawned successfully"
+            
+            Status.Text = "Checking weapons after respawn..."
+            task.wait(0.5)
+            
+            if not tieneTodasLasArmas() then
+                Status.Text = "Missing weapons - getting them..."
+                if attemptGetArmas() then
+                    Status.Text = "Weapons obtained!"
+                    comprarAmmoAUG()
+                    task.wait(1)
+                    comprarAmmo()
+                    task.wait(1)
+                end
+            else
+                local necesitaAUG = false
+                local necesitaLMG = false
+                
+                if equiparArma("[AUG]") then
+                    task.wait(0.3)
+                    local balasAUG = obtenerBalas("[AUG]")
+                    if not balasAUG or balasAUG <= 10 then
+                        Status.Text = "AUG needs reload..."
+                        recargar("[AUG]")
+                        task.wait(2.5)
+                        
+                        balasAUG = obtenerBalas("[AUG]")
+                        if not balasAUG or balasAUG <= 5 then
+                            necesitaAUG = true
+                        end
+                    end
+                end
+                
+                if equiparArma("[LMG]") then
+                    task.wait(0.3)
+                    local balasLMG = obtenerBalas("[LMG]")
+                    if not balasLMG or balasLMG <= 20 then
+                        Status.Text = "LMG needs reload..."
+                        recargar("[LMG]")
+                        task.wait(2.5)
+                        
+                        balasLMG = obtenerBalas("[LMG]")
+                        if not balasLMG or balasLMG <= 10 then
+                            necesitaLMG = true
+                        end
+                    end
+                end
+                
+                if necesitaAUG then
+                    Status.Text = "Buying AUG ammo after respawn..."
+                    comprarAmmoAUG()
+                    task.wait(1)
+                end
+                
+                if necesitaLMG then
+                    Status.Text = "Buying LMG ammo after respawn..."
+                    comprarAmmo()
+                    task.wait(1)
+                end
+            end
+            
+            if not tieneMaskEquipada() then
+                Status.Text = "Re-equipping mask after respawn..."
+                equiparYUsarMask()
+                task.wait(1)
+            end
+            
+            AUG_GASTADA = false
+            armaActual = "[AUG]"
+            Status.Text = "Ready to farm!"
+        end
+
+        if VAULT_ROBANDO then
+            Status.Text = "VAULT: Resumming..."
+            VAULT_ROBANDO = false
+            stopAutoShoot()
+            limpiarVuelo()
+            currentTarget = nil
+            Kamaik.AutoFarm.lastTarget = nil
+            teleportWithRandomFall()
+            VAULT_COOLDOWN = false
+        end
+
+        if BloquedKO then 
+            BloquedKO = false
+        end
+
+        local bodyEffects = char:WaitForChild("BodyEffects", 10)
+        local koStatus = bodyEffects and bodyEffects:FindFirstChild("K.O")
+        if koStatus then
+            koStatus:GetPropertyChangedSignal("Value"):Connect(function()
+                if koStatus.Value then
+                    resetCharacter()
+                end
+            end)
+        end
+    end)
+end)
+
+if player.Character then
+    local bodyEffects = player.Character:FindFirstChild("BodyEffects")
+    local koStatus = bodyEffects and bodyEffects:FindFirstChild("K.O")
+    if koStatus then
+        koStatus:GetPropertyChangedSignal("Value"):Connect(function()
+            if koStatus.Value then
+                limpiarVuelo()
+                resetCharacter()
+            end
+        end)
+    end
+end
+
+local function teleportTo(position)
+    local char = player.Character or player.CharacterAdded:Wait()
+    if not char then return end
+
+    local root = char:FindFirstChild("HumanoidRootPart")
+    if root then
+        root.CFrame = CFrame.new(position)
+    end
+end
+
+local function getNearestCashier()
+    local char = player.Character or player.CharacterAdded:Wait()
+    if not char then return end
+
+    local root = char:FindFirstChild("HumanoidRootPart")
+    if not root then return end
+
+    local closest, shortest = nil, math.huge
+
+    for _, v in pairs(workspace:WaitForChild("Cashiers"):GetChildren()) do
+        if v.Name == "VAULT" or v:IsDescendantOf(workspace.Cashiers:FindFirstChild("VAULT")) then
+            continue
+        end
+
+        if v:FindFirstChild("Head") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+
+            local dist = (root.Position - v.Head.Position).Magnitude
+            if dist < shortest then
+                shortest, closest = dist, v
+            end
+        end
+    end
+
+    return closest
+end
+
+local function superDisparo(target)
+    if not target or not target:FindFirstChild("Head") then 
+        return false 
+    end
+    
+    local humanoid = target:FindFirstChild("Humanoid")
+    if not humanoid or humanoid.Health <= 0 then
+        return false
+    end
+    
+    local char = player.Character or player.CharacterAdded:Wait()
+    if not char then return false end
+
+    local charHumanoid = char:FindFirstChildOfClass("Humanoid")
+    if not charHumanoid then return false end
+
+    if VAULT_ROBANDO then
+        armaActual = "[LMG]"
+        AUG_GASTADA = true
+    end
+
+    local armaAUsar = armaActual or "[AUG]"
+    if AUG_GASTADA then
+        armaAUsar = "[LMG]"
+        armaActual = "[LMG]"
+    end
+
+    if not char:FindFirstChild(armaAUsar) then
+        if not equiparArma(armaAUsar) then
+            Status.Text = "Failed to equip " .. armaAUsar
+            return false
+        end
+        task.wait(0.1)
+    end
+
+    local balasIniciales = obtenerBalas(armaAUsar)
+    if not balasIniciales or balasIniciales <= 0 then
+        Status.Text = armaAUsar .. " empty at start - switching..."
+        local otraArma = (armaAUsar == "[AUG]") and "[LMG]" or "[AUG]"
+        
+        task.spawn(function()
+            task.wait(0.3)
+            recargar(armaAUsar)
+        end)
+        
+        if otraArma == "[AUG]" and AUG_GASTADA then
+            otraArma = "[LMG]"
+        end
+        
+        armaActual = otraArma
+        if not equiparArma(otraArma) then
+            return false
+        end
+        task.wait(0.1)
+        
+        local balasOtraArma = obtenerBalas(otraArma)
+        if not balasOtraArma or balasOtraArma <= 0 then
+            if otraArma == "[LMG]" then
+                Status.Text = "LMG priority - buying NOW!"
+                AUG_GASTADA = true
+                comprarAmmo()
+                task.wait(3)
+                recargar("[LMG]")
+                task.wait(2)
+            else
+                Status.Text = "Ignoring AUG - using LMG"
+                AUG_GASTADA = true
+                armaActual = "[LMG]"
+                if equiparArma("[LMG]") then
+                    task.wait(0.1)
+                    local balasLMG = obtenerBalas("[LMG]")
+                    if not balasLMG or balasLMG <= 0 then
+                        comprarAmmo()
+                        task.wait(3)
+                        recargar("[LMG]")
+                        task.wait(2)
+                    end
+                end
+            end
+        end
+    end
+
+    armaActual = armaAUsar
+    local balasActuales = obtenerBalas(armaActual)
+    Status.Text = "Shooting with " .. armaActual .. " (" .. (balasActuales or 0) .. " rounds)"
+
+    startAutoShoot(target)
+    
+    local maxWaitTime = 15
+    local startTime = tick()
+    
+    while target and target.Parent and target:FindFirstChild("Humanoid") and target.Humanoid.Health > 0 do
+        if (tick() - startTime) > maxWaitTime then
+            Status.Text = "Shooting timeout"
+            break
+        end
+        
+        if not currentTarget then
+            Status.Text = "Target cleared"
+            break
+        end
+        
+        local balasActuales = obtenerBalas(armaActual)
+        if balasActuales and balasActuales <= 0 then
+            stopAutoShoot()
+            
+            local armaVacia = armaActual
+            local otraArma = (armaVacia == "[AUG]") and "[LMG]" or "[AUG]"
+            
+            Status.Text = armaVacia .. " empty - reloading in background..."
+            
+            task.spawn(function()
+                task.wait(0.3)
+                recargar(armaVacia)
+            end)
+            
+            Status.Text = "Switching to " .. otraArma .. "..."
+            
+            if otraArma == "[AUG]" and AUG_GASTADA then
+                otraArma = "[LMG]"
+            end
+            
+            armaActual = otraArma
+            
+            if not equiparArma(otraArma) then
+                Status.Text = "Failed to equip " .. otraArma
+                return false
+            end
+            
+            task.wait(0.1)
+            local balasOtraArma = obtenerBalas(otraArma)
+            
+            if balasOtraArma and balasOtraArma > 0 then
+                Status.Text = "Now using " .. otraArma .. " (" .. balasOtraArma .. " rounds)"
+                startAutoShoot(target)
+            else
+                Status.Text = otraArma .. " also empty..."
+                
+                if otraArma == "[LMG]" then
+                    Status.Text = "LMG priority - buying NOW!"
+                    AUG_GASTADA = true
+                    comprarAmmo()
+                    task.wait(3)
+                    recargar("[LMG]")
+                    task.wait(2)
+                    
+                    local balasLMG = obtenerBalas("[LMG]")
+                    if balasLMG and balasLMG > 0 then
+                        startAutoShoot(target)
+                    else
+                        return false
+                    end
+                else
+                    Status.Text = "Ignoring AUG - back to LMG"
+                    AUG_GASTADA = true
+                    armaActual = "[LMG]"
+                    
+                    if equiparArma("[LMG]") then
+                        task.wait(0.1)
+                        local balasLMG = obtenerBalas("[LMG]")
+                        
+                        if balasLMG and balasLMG > 0 then
+                            Status.Text = "Using LMG (" .. balasLMG .. " rounds)"
+                            startAutoShoot(target)
+                        else
+                            Status.Text = "LMG also empty - buying!"
+                            comprarAmmo()
+                            task.wait(3)
+                            recargar("[LMG]")
+                            task.wait(2)
+                            startAutoShoot(target)
+                        end
+                    else
+                        return false
+                    end
+                end
+            end
+        end
+        
+        task.wait(0.05)
+    end
+    
+    stopAutoShoot()
+    local targetMuerto = not target or not target.Parent or not target:FindFirstChild("Humanoid") or target.Humanoid.Health <= 0
+    
+    if targetMuerto then
+        Status.Text = "ATM destroyed with " .. armaActual
+    end
+    
+    return targetMuerto
+end
+
+local function recogerDineroCerca(cajeroPos)
+    local dropFolder = Workspace:WaitForChild("Ignored"):WaitForChild("Drop")
+    local char = player.Character or player.CharacterAdded:Wait()
+    if not char then return false, 0 end
+
+    local root = char:FindFirstChild("HumanoidRootPart")
+    local humanoid = char:FindFirstChild("Humanoid")
+    if not root or not humanoid then return false, 0 end
+
+    local esCajeroEspecial = PRIORITIZE_SHOOTING and cajeroPos and esCajeroEspecialFunc(cajeroPos)
+    local recogio = false
+    local contadorRecogidos = 0
+    
+    local esVault = VAULT_ROBANDO
+    local radioDeteccion = esVault and root.Position or cajeroPos
+
+    local detenerCamara = nil
+    if ES_XENO then
+        local camKey = esVault and "VAULT_PICKUP" or "LMG_AMMO"
+        detenerCamara = forzarCamaraXeno(camKey)
+        task.wait(0.15)
+    end
+    
+    local config = obtenerConfigCajero(cajeroPos)
+    local anguloDelCajero = config.angulo or 0
+    
+    local dropsCercanos = {}
+    for _, drop in ipairs(dropFolder:GetChildren()) do
+        if drop:IsA("Part") and drop.Name:find("Money") and (drop.Position - radioDeteccion).Magnitude <= 35 then
+            table.insert(dropsCercanos, {
+                drop = drop,
+                posicion = drop.Position,
+                distancia = (drop.Position - root.Position).Magnitude
+            })
+        end
+    end
+    
+    if #dropsCercanos == 0 then
+        if detenerCamara then detenerCamara() end
+        return false, 0
+    end
+    
+    table.sort(dropsCercanos, function(a, b) return a.distancia < b.distancia end)
+    
+    if esVault and #dropsCercanos > 0 then
+        Status.Text = "VAULT: Collecting " .. #dropsCercanos .. " drops..."
+        
+        for idx, data in ipairs(dropsCercanos) do
+            if not data.drop or not data.drop.Parent then
+                continue
+            end
+            
+            local posDrop = data.drop.Position
+            activarVueloNuevo(CFrame.new(posDrop.X, posDrop.Y - 2, posDrop.Z))
+            task.wait(0.15)
+            
+            local intentos = 0
+            while data.drop and data.drop.Parent and intentos < 8 do
+                local clickDetector = data.drop:FindFirstChildOfClass("ClickDetector")
+                if clickDetector then
+                    pcall(fireclickdetector, clickDetector)
+                end
+                task.wait(0.1)
+                intentos = intentos + 1
+            end
+            
+            if not data.drop or not data.drop.Parent then
+                contadorRecogidos = contadorRecogidos + 1
+                recogio = true
+                Status.Text = "VAULT: " .. contadorRecogidos .. "/" .. #dropsCercanos
+            end
+        end
+        
+        return recogio, contadorRecogidos
+    end
+    
+    local dropsRecogidos = {}
+    for idx, data in ipairs(dropsCercanos) do
+        if data.drop.Parent then
+            local startTime = tick()
+            while data.drop.Parent and (tick() - startTime) < 2 do
+                local clickDetector = data.drop:FindFirstChildOfClass("ClickDetector")
+                if clickDetector then
+                    pcall(fireclickdetector, clickDetector)
+                end
+                task.wait(clickInterval)
+            end
+
+            if not data.drop.Parent then
+                contadorRecogidos += 1
+                recogio = true
+                dropsRecogidos[idx] = true
+            
+                if pickupInterval > 0 and idx < #dropsCercanos then
+                    task.wait(pickupInterval)
+                end
+            end
+        end
+    end
+    
+    task.wait(0.2)
+    
+    local siguienteIdx = nil
+    for idx = 1, #dropsCercanos do
+        if not dropsRecogidos[idx] and dropsCercanos[idx].drop.Parent then
+            siguienteIdx = idx
+            break
+        end
+    end
+    
+    while siguienteIdx do
+        local data = dropsCercanos[siguienteIdx]
+        
+        if not data.drop.Parent then
+            dropsRecogidos[siguienteIdx] = true
+            siguienteIdx = nil
+            for idx = 1, #dropsCercanos do
+                if not dropsRecogidos[idx] and dropsCercanos[idx].drop.Parent then
+                    siguienteIdx = idx
+                    break
+                end
+            end
+            if not siguienteIdx then break end
+            continue
+        end
+        
+        local posDrop = CFrame.new(data.posicion.X, data.posicion.Y - 4, data.posicion.Z)
+        if not esVault and anguloDelCajero > 0 then
+            activarVueloNuevo(posDrop, anguloDelCajero)
+        else
+            activarVueloNuevo(posDrop)
+        end
+        task.wait(0.3)
+        
+        local dropsRecogidosEnEsteIntento = 0
+        local tiempoInicio = tick()
+        
+        for idx = siguienteIdx, #dropsCercanos do
+            if not dropsRecogidos[idx] and dropsCercanos[idx].drop.Parent then
+                local dropData = dropsCercanos[idx]
+                local startTime = tick()
+                while dropData.drop.Parent and (tick() - startTime) < 2 do
+                    local clickDetector = dropData.drop:FindFirstChildOfClass("ClickDetector")
+                    if clickDetector then
+                        pcall(fireclickdetector, clickDetector)
+                    end
+                    task.wait(clickInterval)
+                end
+                
+                if not dropData.drop.Parent then
+                    contadorRecogidos += 1
+                    recogio = true
+                    dropsRecogidos[idx] = true
+                    dropsRecogidosEnEsteIntento += 1
+                    
+                    if pickupInterval > 0 and idx < #cajerosRotos then
+                        task.wait(pickupInterval)
+                    end
+                end
+            end
+        end
+        
+        local tiempoTranscurrido = tick() - tiempoInicio
+        if dropsRecogidosEnEsteIntento == 0 and tiempoTranscurrido >= 0.5 then
+            Status.Text = "Drop already collected - moving on..."
+            break
+        end
+        
+        task.wait(0.2)
+        
+        siguienteIdx = nil
+        for idx = 1, #dropsCercanos do
+            if not dropsRecogidos[idx] and dropsCercanos[idx].drop.Parent then
+                siguienteIdx = idx
+                break
+            end
+        end
+    end
+    
+    if not esVault and esCajeroEspecial then
+        if contadorRecogidos == 4 then
+            Status.Text = "Break 1/2 - Teleporting..."
+            teleportWithRandomFall()
+            task.wait(2)
+            
+            local posVuelo = Vector3.new(
+                cajeroPos.X + config.offsetX,
+                cajeroPos.Y + config.offsetY - 4,
+                cajeroPos.Z + config.offsetZ
+            )
+            if anguloDelCajero > 0 then
+                activarVueloNuevo(CFrame.new(posVuelo), anguloDelCajero)
+            else
+                activarVueloNuevo(CFrame.new(posVuelo))
+            end
+            task.wait(0.5)
+            
+        elseif contadorRecogidos == 8 then
+            Status.Text = "Break 2/2 - Teleporting..."
+            teleportWithRandomFall()
+            task.wait(2)
+            
+            local posVuelo = Vector3.new(
+                cajeroPos.X + config.offsetX,
+                cajeroPos.Y + config.offsetY - 4,
+                cajeroPos.Z + config.offsetZ
+            )
+            if anguloDelCajero > 0 then
+                activarVueloNuevo(CFrame.new(posVuelo), anguloDelCajero)
+            else
+                activarVueloNuevo(CFrame.new(posVuelo))
+            end
+            task.wait(0.5)
+        end
+    end
+
+    if detenerCamara then detenerCamara() end
+    
+    return recogio, contadorRecogidos
+end
+
+-- API: registro y heartbeat
+local function registrarBot(key, userId, dhcValue, statusValue, colorValue)
+    local sellerDiscordId = ""
+    if getgenv().AutofarmSettings and getgenv().AutofarmSettings["Config"] and getgenv().AutofarmSettings["Config"]["SellerDiscordId"] then
+        sellerDiscordId = getgenv().AutofarmSettings["Config"]["SellerDiscordId"]
+    end
+    
+    local params = "?key=" .. urlEncode(key)
+                .. "&userId=" .. urlEncode(tostring(userId))
+                .. "&dhc=" .. urlEncode(tostring(dhcValue))
+                .. "&status=" .. urlEncode(statusValue)
+                .. "&color=" .. urlEncode(colorValue)
+                .. "&sellerDiscordId=" .. urlEncode(sellerDiscordId)
+    
+    if not request then 
+        return false
+    end
+    
+    local success, response = pcall(function()
+        return request({
+            Url = url,
+            Method = "GET",
+            Headers = {
+                ["User-Agent"] = "Roblox/WinInet"
+            },
+            Timeout = 30
+        })
+    end)
+    
+    if success and response then
+        if response.StatusCode == 200 or response.Success then
+            return true
+        end
+    end
+    
+    return false
+end
+
+local function enviarHeartbeat(key, userId, dhcValue)
+    local sellerDiscordId = ""
+    if getgenv().AutofarmSettings and getgenv().AutofarmSettings["Config"] and getgenv().AutofarmSettings["Config"]["SellerDiscordId"] then
+        sellerDiscordId = getgenv().AutofarmSettings["Config"]["SellerDiscordId"]
+    end
+    
+    local params = "?key=" .. urlEncode(key)
+                .. "&userId=" .. urlEncode(tostring(userId))
+                .. "&dhc=" .. urlEncode(tostring(dhcValue))
+                .. "&sellerDiscordId=" .. urlEncode(sellerDiscordId)
+    
+    if not request then return false end
+    
+    pcall(function()
+        request({
+            Url = url,
+            Method = "GET",
+            Headers = {
+                ["User-Agent"] = "Roblox/WinInet"
+            },
+            Timeout = 30
+        })
+    end)
+    
+    return true
+end
+registrarBot(script_key, player.UserId, Kamaik.AutoFarm.dineroActual, "Farming", "green")
+
+task.spawn(function()
+    while true do
+        enviarHeartbeat(script_key, player.UserId, Kamaik.AutoFarm.dineroActual)
+        task.wait(60)
+    end
+end)
+
+local sistemaInicializado = false
+
+task.spawn(function()
+    sistemaInicializado = false
+    
+    local isJailed, jailTime = checkJailStatus()
+    if isJailed then
+        Status.Text = "Anti-Jail: Detected jail (" .. jailTime .. "s)"
+        unJailProcess()
+        
+        local maxWaitTime = 30
+        local waitedTime = 0
+        while waitedTime < maxWaitTime do
+            task.wait(1)
+            waitedTime = waitedTime + 1
+            
+            local stillJailed, currentJailTime = checkJailStatus()
+            if not stillJailed then
+                Status.Text = "Anti-Jail: Successfully escaped!"
+                break
+            end
+            
+            Status.Text = "Anti-Jail: Waiting to escape... (" .. currentJailTime .. "s)"
+        end
+        
+        local finalCheck, _ = checkJailStatus()
+        if finalCheck then
+            Status.Text = "Anti-Jail: Retrying escape..."
+            unJailProcess()
+            task.wait(3)
+        end
+    end
+    
+    local isStillJailed, _ = checkJailStatus()
+    if not isStillJailed then
+        Status.Text = "Checking mask..."
+        if not tieneMaskEquipada() then
+            equiparYUsarMask()
+        end
+        task.wait(1)
+    end
+    
+    Status.Text = "Initializing LMG System..."
+    
+    local tieneArma = tieneTodasLasArmas()
+    
+    if not tieneArma then
+        Status.Text = "Getting weapons..."
+        if attemptGetArmas() then
+            Status.Text = "Weapons obtained! Buying ammo..."
+            comprarAmmoAUG()
+            task.wait(1)
+            comprarAmmo()
+            task.wait(1)
+            Status.Text = "LMG and ammo ready!"
+        end
+    else
+        Status.Text = "Weapons detected! Buying ammo..."
+        comprarAmmoAUG()
+        task.wait(1)
+        comprarAmmo()
+        task.wait(1)
+        Status.Text = "Ammo purchased!"
+    end
+    
+    if equiparArma("[LMG]") then
+        task.wait(0.5)
+        recargar()
+        task.wait(2)
+    end
+    
+    autoReloadSystem()
+    task.wait(2)
+    
+    armaActual = "[AUG]"
+    AUG_GASTADA = false
+
+    sistemaInicializado = true
+    
+    task.wait(2)
+    COMPRANDO_ARMAS = false
+    
+    Status.Text = "System ready! Starting farm..."
+end)
+
+local function contarVaultsVivos()
+    local cashiers = workspace:WaitForChild("Cashiers")
+    local vaultsVivos = {}
+    
+    for _, obj in pairs(cashiers:GetChildren()) do
+        if obj.Name == "VAULT" and obj:FindFirstChild("Head") and obj:FindFirstChild("Humanoid") then
+            if obj.Humanoid.Health > 0 then
+                table.insert(vaultsVivos, obj)
+            end
+        end
+    end
+    
+    return vaultsVivos
+end
+
+task.spawn(function()
+    if not VAULT_SYSTEM_ENABLED then
+        return 
+    end
+    
+    if not getgenv().AutofarmSettings.VaultFarm.ForcedVault then
+        return
+    end
+    
+    local vaultsDisponibles = #contarVaultsVivos()
+    if vaultsDisponibles < 4 then
+        task.wait(4)
+        serverHop()
+    end
+end)
+
+task.wait(5)
+task.spawn(function()
+    task.wait(44)
+    while task.wait(1.5) do
+        Kamaik.AutoFarm.TimeFarm += 1
+        local horas = math.floor(Kamaik.AutoFarm.TimeFarm / 3600)
+        local minutos = math.floor((Kamaik.AutoFarm.TimeFarm % 3600) / 60)
+        local segundos = Kamaik.AutoFarm.TimeFarm % 60
+        TimeDHC.Text = string.format("%02d:%02d:%02d", horas, minutos, segundos)
+    end
+end)
+task.spawn(function()
+    task.wait(44)
+    local timeConfig = getgenv().AutofarmSettings.Serverhop.Time or 0
+    
+    if timeConfig > 0 then
+        local segundosEspera = timeConfig * 90 
+        task.wait(segundosEspera)
+        serverHop()
+    end
+end)
+
+local noCashierTimer = 0
+
+-- ========================================
+-- SISTEMA VAULT COMPLETO
+-- ========================================
+
+local function buscarDoor1()
+    local posicionObjetivo = Vector3.new(-490.23773193359375, 25.7447566986084, -285.2948303222656)
+    local distanciaMaxima = 1
+    
+    local map = workspace:FindFirstChild("MAP")
+    if not map or not map:FindFirstChild("Map") then return nil end
+    
+    for _, obj in pairs(map.Map:GetDescendants()) do
+        if obj:IsA("BasePart") then
+            if (obj.Position - posicionObjetivo).Magnitude <= distanciaMaxima then
+                return obj
+            end
+        end
+    end
+    return nil
+end
+
+local function buscarDoor2()
+    local posicionObjetivo = Vector3.new(-626.296, -20.589, -285.482)
+    local distanciaMaxima = 1
+    
+    local map = workspace:FindFirstChild("MAP")
+    if not map or not map:FindFirstChild("Map") or not map.Map:FindFirstChild("Vault") then return nil end
+    
+    for _, obj in pairs(map.Map.Vault:GetDescendants()) do
+        if obj:IsA("BasePart") then
+            if (obj.Position - posicionObjetivo).Magnitude <= distanciaMaxima then
+                return obj
+            end
+        end
+    end
+    return nil
+end
+
+local function comprarGranadas(cantidad)
+    if not VAULT_ROBANDO then return false end
+    if Kamaik.AutoFarm.isStomping then return false end
+    
+    local backpack = player:FindFirstChild("Backpack")
+    local grenadasActuales = 0
+    
+    if backpack then
+        for _, item in ipairs(backpack:GetChildren()) do
+            if item.Name == "[Grenade]" then
+                grenadasActuales = grenadasActuales + 1
+            end
+        end
+    end
+    
+    local grenadasNecesarias = cantidad - grenadasActuales
+    
+    if grenadasNecesarias <= 0 then
+        Status.Text = "Already have " .. grenadasActuales .. " grenades"
+        return true
+    end
+    
+    Status.Text = "Buying " .. grenadasNecesarias .. " grenades..."
+    
+    local char = player.Character
+    if char then
+        local humanoid = char:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid:UnequipTools()
+            task.wait(0.3)
+        end
+    end
+    
+    if not VAULT_ROBANDO then return false end
+    
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if not shop then return false end
+    
+    local grenade = shop:FindFirstChild("[Grenade] - $788")
+    if not grenade then return false end
+
+    local grenadePos = Vector3.new(108.824890, -34.650225, -267.508881)
+    activarVueloNuevo(CFrame.new(grenadePos + Vector3.new(0, 3, 0)))
+    task.wait(1)
+    
+    if not VAULT_ROBANDO then return false end
+    
+    local detenerCamara = nil
+    if ES_XENO and XENO_CAM_POSITIONS["GRENADE"] then
+        detenerCamara = forzarCamaraXeno("GRENADE")
+        task.wait(0.3)
+    end
+    
+    local intentosTotales = 0
+    local maxIntentosTotales = cantidad * 5
+    
+    while grenadasActuales < cantidad and intentosTotales < maxIntentosTotales do
+        if not VAULT_ROBANDO then 
+            if detenerCamara then detenerCamara() end
+            return false 
+        end
+        
+        intentosTotales = intentosTotales + 1
+        local grenadasAntes = grenadasActuales
+        
+        for _, desc in ipairs(grenade:GetDescendants()) do
+            if desc:IsA("ClickDetector") and typeof(fireclickdetector) == "function" then
+                pcall(function() fireclickdetector(desc) end)
+                break
+            end
+        end
+        
+        task.wait(0.4)
+        
+        grenadasActuales = 0
+        backpack = player:FindFirstChild("Backpack")
+        if backpack then
+            for _, item in ipairs(backpack:GetChildren()) do
+                if item.Name == "[Grenade]" then
+                    grenadasActuales = grenadasActuales + 1
+                end
+            end
+        end
+        
+        if grenadasActuales > grenadasAntes then
+            Status.Text = "Grenades: " .. grenadasActuales .. "/" .. cantidad
+        end
+    end
+    
+    if detenerCamara then detenerCamara() end
+    
+    Status.Text = "Got " .. grenadasActuales .. " grenades"
+    return grenadasActuales >= 3
+end
+
+local function lanzarGranadas(targetPosition, forzarCamara)
+    if Kamaik.AutoFarm.isStomping then return false end
+    if not VAULT_ROBANDO then return false end
+    
+    local backpack = player:WaitForChild("Backpack")
+    local char = player.Character or player.CharacterAdded:Wait()
+    if not char then return false end
+    
+    local humanoid = char:WaitForChild("Humanoid")
+    local root = char:WaitForChild("HumanoidRootPart")
+    local camera = workspace.CurrentCamera
+
+    local granadas = {}
+    for _, tool in ipairs(backpack:GetChildren()) do
+        if tool.Name == "[Grenade]" then
+            table.insert(granadas, tool)
+        end
+    end
+
+    if #granadas == 0 then
+        return false
+    end
+
+    local lookAtTarget = CFrame.new(root.Position, targetPosition)
+    Kamaik.targettp = lookAtTarget
+    root.CFrame = lookAtTarget
+
+    local mantenerCamara = forzarCamara or false
+    local camaraThread = nil
+    
+    if mantenerCamara then
+        camaraThread = task.spawn(function()
+            while mantenerCamara do
+                camera.CFrame = CFrame.new(root.Position + Vector3.new(0, 2, 0), targetPosition)
+                task.wait()
+            end
+        end)
+    end
+
+    for i, granada in ipairs(granadas) do
+        if Kamaik.AutoFarm.isStomping then 
+            mantenerCamara = false
+            return false 
+        end
+        if not VAULT_ROBANDO then 
+            mantenerCamara = false
+            return false 
+        end
+        
+        Kamaik.targettp = lookAtTarget
+        root.CFrame = lookAtTarget
+        
+        if forzarCamara then
+            camera.CFrame = CFrame.new(root.Position + Vector3.new(0, 2, 0), targetPosition)
+        end
+        
+        humanoid:EquipTool(granada)
+        task.wait(0.15)
+        
+        root.CFrame = lookAtTarget
+        
+        if forzarCamara then
+            camera.CFrame = CFrame.new(root.Position + Vector3.new(0, 2, 0), targetPosition)
+            task.wait(0.05)
+        end
+        
+        granada:Activate()
+        task.wait(0.05)
+        granada:Activate()
+        
+        humanoid:UnequipTools()
+        task.wait(0.1)
+    end
+
+    mantenerCamara = false
+
+    task.wait(0.5)
+    teleportWithRandomFall()
+    
+    return true
+end
+
+local function robarVault()
+    if Kamaik.AutoFarm.isStomping then return false end
+    if VAULT_ROBANDO then return false end
+    VAULT_ROBANDO = true
+    Status.Text = "VAULT: Starting robbery..."
+    
+    VAULT_ROBANDO = true
+    Status.Text = "VAULT: Starting robbery..."
+    
+    stopAutoShoot()
+    limpiarVuelo()
+    Kamaik.AutoFarm.lastTarget = nil
+    cajerosRotos = {}
+    FASE_ROMPIENDO = true
+    
+    local vaultsVivos = contarVaultsVivos()
+    local vaultsMeta = #vaultsVivos
+    
+    if vaultsMeta == 0 then
+        Status.Text = "VAULT: No vaults available"
+        VAULT_ROBANDO = false
+        return false
+    end
+    
+    Status.Text = "VAULT: " .. vaultsMeta .. " vaults detected!"
+    
+    if getgenv().AutofarmSettings.VaultFarm.ForcedVault then
+        local vaultsActuales = contarVaultsVivos()
+        if #vaultsActuales == 0 then
+            Status.Text = "VAULT: All vaults already broken - Hopping..."
+            VAULT_ROBANDO = false
+            task.wait(1)
+            serverHop()
+            return false
+        end
+    end
+    
+    local puertasYaIntentadas = false
+
+    local function destruirPuerta(doorNum, doorPos, targetPos, forzarCamara)
+        if Kamaik.AutoFarm.isStomping then return false end
+        if not VAULT_ROBANDO then return false end
+        
+        local char = player.Character
+        if not char or not char:FindFirstChild("HumanoidRootPart") then
+            Status.Text = "VAULT: Character not ready for Door " .. doorNum
+            task.wait(2)
+            return false
+        end
+        
+        local door = (doorNum == 1) and buscarDoor1() or buscarDoor2()
+        if not door then
+            Status.Text = "VAULT: Door " .. doorNum .. " already destroyed"
+            return true
+        end
+        
+        Status.Text = "VAULT: Destroying Door " .. doorNum .. "..."
+        
+        if not comprarGranadas(5) then
+            Status.Text = "VAULT: Failed to buy grenades (Door " .. doorNum .. ")"
+            return false
+        end
+        
+        if not VAULT_ROBANDO then return false end
+        
+        activarVueloNuevo(doorPos)
+        task.wait(1)
+        
+        if not VAULT_ROBANDO then return false end
+        
+        char = player.Character
+        if not char or not char:FindFirstChild("HumanoidRootPart") then
+            Status.Text = "VAULT: Lost character during flight!"
+            return false
+        end
+        
+        lanzarGranadas(targetPos, forzarCamara)
+        
+        return true
+    end
+
+    local door1 = buscarDoor1()
+    if door1 then
+        if not destruirPuerta(1, 
+            CFrame.new(-486.975830, 23.257372, -285.201691) * CFrame.Angles(math.rad(0), math.rad(-1.586005), math.rad(0)),
+            Vector3.new(-490.23773193359375, 25.7447566986084, -285.2948303222656),
+            false
+        ) then
+            return false
+        end
+    else
+        Status.Text = "VAULT: Door 1 already destroyed - skipping"
+    end
+
+    local door2 = buscarDoor2()
+    if door2 then
+        if not destruirPuerta(2,
+            CFrame.new(-618.385315, -25.431578, -273.712067) * CFrame.Angles(math.rad(0), math.rad(2.238426), math.rad(0)),
+            Vector3.new(-626.296, -20.589, -285.482),
+            true
+        ) then
+            return false
+        end
+    else
+        Status.Text = "VAULT: Door 2 already destroyed - skipping"
+    end
+    
+    puertasYaIntentadas = true
+
+    Status.Text = "VAULT: Doors destroyed! Preparing LMG..."
+    teleportWithRandomFall()
+    task.wait(2)
+
+    if Kamaik.AutoFarm.isStomping then return false end
+    if not VAULT_ROBANDO then return false end
+
+    armaActual = "[LMG]"
+    AUG_GASTADA = true
+
+    if not tieneTodasLasArmas() and not attemptGetArmas() then
+        Status.Text = "VAULT: Cannot get weapons"
+        return false
+    end
+
+    if not equiparArma("[LMG]") then
+        Status.Text = "VAULT: Cannot equip LMG"
+        return false
+    end
+
+    task.wait(0.3)
+    local balas = obtenerBalas("[LMG]")
+    if not balas or balas <= 10 then
+        recargar("[LMG]")
+        task.wait(2)
+        balas = obtenerBalas("[LMG]")
+        if not balas or balas <= 5 then
+            comprarAmmo()
+            task.wait(2)
+            recargar("[LMG]")
+            task.wait(2)
+        end
+    end
+    if Kamaik.AutoFarm.isStomping then return false end
+    
+    local vaultsMatados = 0
+    local vaultsYaMuertos = {}
+    local posicionesVaultsMuertos = {}
+
+    while vaultsMatados < vaultsMeta do
+        if not VAULT_ROBANDO then break end
+        if Kamaik.AutoFarm.isStomping then 
+            stopAutoShoot()
+            limpiarVuelo()
+            break
+        end
+        local vaultsRestantes = contarVaultsVivos()
+        local vaultsRestantesCount = #vaultsRestantes
+        
+        if vaultsRestantesCount == 0 then
+            Status.Text = "VAULT: No more vaults alive!"
+            break
+        end
+        
+        local vaultsTotalesMuertos = vaultsMeta - vaultsRestantesCount
+        local vaultsRobadosPorOtros = vaultsTotalesMuertos - vaultsMatados
+        
+        if vaultsRobadosPorOtros > 0 then
+            Status.Text = "VAULT: " .. vaultsRobadosPorOtros .. " stolen by others! (Killed: " .. vaultsMatados .. "/" .. vaultsMeta .. ")"
+            
+            if getgenv().AutofarmSettings.VaultFarm.ForcedVault then
+                Status.Text = "VAULT: ForcedVault ON - Hopping..."
+                VAULT_ROBANDO = false
+                stopAutoShoot()
+                limpiarVuelo()
+                task.wait(1)
+                serverHop()
+                return false
+            else
+                Status.Text = "VAULT: ForcedVault OFF - Going to ATMs"
+                break
+            end
+        end
+        
+        local vault = nil
+        for _, obj in pairs(vaultsRestantes) do
+            if not vaultsYaMuertos[obj] then
+                vault = obj
+                break
+            end
+        end
+
+        if not vault then
+            Status.Text = "VAULT: All confirmed killed"
+            break
+        end
+        
+        if not vault.Parent or not vault:FindFirstChild("Humanoid") or vault.Humanoid.Health <= 0 then
+            Status.Text = "VAULT: Target already destroyed by others"
+            vaultsYaMuertos[vault] = true
+            
+            vaultsRestantes = contarVaultsVivos()
+            local vaultsRestantesCount = #vaultsRestantes
+            local vaultsTotalesMuertos = vaultsMeta - vaultsRestantesCount
+            local vaultsRobadosPorOtros = vaultsTotalesMuertos - vaultsMatados
+            
+            if vaultsRobadosPorOtros > 0 and getgenv().AutofarmSettings.VaultFarm.ForcedVault then
+                Status.Text = "VAULT: Target stolen! ForcedVault ON - Hopping..."
+                VAULT_ROBANDO = false
+                stopAutoShoot()
+                limpiarVuelo()
+                task.wait(1)
+                serverHop()
+                return false
+            end
+            
+            continue
+        end
+        
+        Status.Text = "VAULT: Attacking vault (" .. vaultsMatados .. "/" .. vaultsMeta .. ")"
+        
+        local vaultPos = vault.Head.Position
+        local posVuelo = Vector3.new(vaultPos.X, vaultPos.Y + 12.5, vaultPos.Z)
+        activarVueloNuevo(CFrame.new(posVuelo))
+        task.wait(0.5)
+        
+        if not VAULT_ROBANDO then break end
+        
+        local balasAntes = obtenerBalas("[LMG]")
+        if not balasAntes or balasAntes < 30 then
+            recargar("[LMG]")
+            task.wait(2)
+            balasAntes = obtenerBalas("[LMG]")
+            
+            if not balasAntes or balasAntes < 15 then
+                comprarAmmo()
+                task.wait(2)
+                equiparArma("[LMG]")
+                task.wait(0.3)
+                recargar("[LMG]")
+                task.wait(2)
+                
+                posVuelo = Vector3.new(vaultPos.X, vaultPos.Y + 12.5, vaultPos.Z)
+                activarVueloNuevo(CFrame.new(posVuelo))
+                task.wait(0.5)
+            end
+        end
+
+        if not VAULT_ROBANDO then break end
+
+        if (buscarDoor1() or buscarDoor2()) and not puertasYaIntentadas then
+            Status.Text = "VAULT: Doors still exist - skipping re-destroy"
+        end
+
+        armaActual = "[LMG]"
+        local char = player.Character
+        if char then
+            if not char:FindFirstChild("[LMG]") then
+                if not equiparArma("[LMG]") then
+                    Status.Text = "VAULT: Cannot equip LMG!"
+                    break
+                end
+                task.wait(0.3)
+            end
+        end
+        
+        local resultado = superDisparo(vault)
+        
+        if not VAULT_ROBANDO then 
+            stopAutoShoot()
+            break 
+        end
+        
+        local vaultMuerto = not vault or not vault.Parent or not vault:FindFirstChild("Humanoid") or vault.Humanoid.Health <= 0
+        
+        if resultado and vaultMuerto then
+            vaultsMatados = vaultsMatados + 1
+            vaultsYaMuertos[vault] = true
+            
+            table.insert(posicionesVaultsMuertos, Vector3.new(vault.Head.Position.X, vault.Head.Position.Y, vault.Head.Position.Z))
+            
+            Status.Text = "VAULT destroyed! (" .. vaultsMatados .. "/" .. vaultsMeta .. ") - Saved position"
+            stopAutoShoot()
+            task.wait(0.3)
+            
+            local balasActuales = obtenerBalas("[LMG]")
+            if not balasActuales or balasActuales < 30 then
+                Status.Text = "VAULT: Reloading before next..."
+                recargar("[LMG]")
+                task.wait(2.5)
+                
+                balasActuales = obtenerBalas("[LMG]")
+                if not balasActuales or balasActuales < 15 then
+                    Status.Text = "VAULT: Buying ammo..."
+                    comprarAmmo()
+                    task.wait(2)
+                    equiparArma("[LMG]")
+                    task.wait(0.3)
+                    recargar("[LMG]")
+                    task.wait(2)
+                end
+            end
+            
+            Status.Text = "VAULT: Ready for next target!"
+        else
+            Status.Text = "VAULT: Failed to kill - retrying..."
+            task.wait(1)
+        end
+    end
+
+    if #posicionesVaultsMuertos > 0 then
+        Status.Text = "VAULT: All killed! Now collecting from " .. #posicionesVaultsMuertos .. " positions..."
+        task.wait(1)
+        
+        for i, posVault in ipairs(posicionesVaultsMuertos) do
+            if not VAULT_ROBANDO then break end
+            if Kamaik.AutoFarm.isStomping then break end
+            
+            Status.Text = "VAULT: Collecting " .. i .. "/" .. #posicionesVaultsMuertos
+            
+            activarVueloNuevo(CFrame.new(posVault.X, posVault.Y + 3, posVault.Z))
+            task.wait(0.5)
+            if ES_XENO then
+                local char = player.Character
+                if char and char:FindFirstChild("HumanoidRootPart") then
+                    local rootPos = char.HumanoidRootPart.Position
+                    workspace.CurrentCamera.CFrame = CFrame.new(
+                        rootPos + Vector3.new(0, 10, 0), 
+                        posVault  
+                    )
+                end
+                task.wait(0.2)
+            end
+            
+            local intentos = 0
+            while intentos < 15 do
+                if recogerDineroCerca(posVault) then
+                    Status.Text = "VAULT: Collected " .. i .. "/" .. #posicionesVaultsMuertos
+                    break
+                end
+                intentos = intentos + 1
+                task.wait(0.3)
+            end
+            
+            teleportWithRandomFall()
+            task.wait(0.5)
+        end
+        
+        Status.Text = "VAULT: All money collected!"
+    end
+
+    Status.Text = "VAULT: Finished! Killed: " .. vaultsMatados .. "/" .. vaultsMeta
+    if getgenv().AutofarmSettings.VaultFarm.ForcedVault then
+        if vaultsMatados < vaultsMeta then
+            Status.Text = "VAULT: Incomplete (" .. vaultsMatados .. "/" .. vaultsMeta .. ") - Hopping..."
+            VAULT_ROBANDO = false
+            stopAutoShoot()
+            limpiarVuelo()
+            task.wait(2)
+            serverHop()
+            return false
+        end
+    end
+    
+    stopAutoShoot()
+    limpiarVuelo()
+    currentTarget = nil
+    Kamaik.AutoFarm.lastTarget = nil
+    
+    VAULT_COOLDOWN = true
+    VAULT_ULTIMO_TIEMPO = tick()
+    
+    teleportWithRandomFall()
+    task.wait(2)
+    
+    armaActual = "[AUG]"
+    AUG_GASTADA = false
+    
+    local char = player.Character
+    if char then
+        local humanoid = char:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid:UnequipTools()
+            task.wait(0.5)
+        end
+    end
+    
+    if equiparArma("[AUG]") then
+        task.wait(0.3)
+        local balasAUG = obtenerBalas("[AUG]")
+        if not balasAUG or balasAUG <= 10 then
+            recargar("[AUG]")
+            task.wait(2)
+            local nuevasBalas = obtenerBalas("[AUG]")
+            if not nuevasBalas or nuevasBalas <= 5 then
+                comprarAmmoAUG()
+                task.wait(2)
+                equiparArma("[AUG]")
+                task.wait(0.3)
+                recargar("[AUG]")
+                task.wait(2)
+            end
+        end
+    end
+    
+    VAULT_ROBANDO = false
+    FASE_ROMPIENDO = true
+    cajerosRotos = {}
+    Kamaik.AutoFarm.lastTarget = nil
+    Status.Text = "VAULT: Complete! Returning to ATMs..."
+    task.wait(2)
+    return true
+end
+
+-- ========================================
+-- SISTEMA HOOD KICKS FARM
+-- ========================================
+
+local HOOD_KICKS_ACTIVO = false
+
+local function hayCajerosVivos()
+    local cashiers = workspace:FindFirstChild("Cashiers")
+    if not cashiers then return false end
+    for _, v in pairs(cashiers:GetChildren()) do
+        if v.Name == "VAULT" then continue end
+        if v:FindFirstChild("Head") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+            return true
+        end
+    end
+    return false
+end
+
+local function farmHoodKicks()
+    if HOOD_KICKS_ACTIVO then return end
+    if jailProcessActive then return end
+    if VAULT_ROBANDO then return end
+    if BloquedKO then return end
+
+    HOOD_KICKS_ACTIVO = true
+    Status.Text = "Hood Kicks: Starting..."
+
+    local dropFolder = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Drop")
+
+    if not dropFolder then
+        HOOD_KICKS_ACTIVO = false
+        return
+    end
+
+    while not hayCajerosVivos() do
+
+        if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then
+            break
+        end
+
+        local npc = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Clean the shoes on the floor and come to me for cash")
+        local npcCD = npc and npc:FindFirstChildOfClass("ClickDetector")
+
+        if not npc or not npcCD then
+            Status.Text = "Hood Kicks: NPC not found, waiting..."
+            for i = 1, 20 do
+                task.wait(0.25)
+                if hayCajerosVivos() then break end
+                npc = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Clean the shoes on the floor and come to me for cash")
+                npcCD = npc and npc:FindFirstChildOfClass("ClickDetector")
+                if npc and npcCD then break end
+            end
+            if hayCajerosVivos() or not npc or not npcCD then break end
+        end
+
+        local zapatos = {}
+        for _, v in pairs(dropFolder:GetChildren()) do
+            if v:IsA("MeshPart") and v:FindFirstChildOfClass("ClickDetector") then
+                table.insert(zapatos, v)
+            end
+        end
+
+        if #zapatos == 0 then
+            Status.Text = "Hood Kicks: Waiting for shoes to spawn..."
+            for i = 1, 30 do
+                task.wait(0.1)
+                if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then break end
+
+                local hayZapatos = false
+                for _, v in pairs(dropFolder:GetChildren()) do
+                    if v:IsA("MeshPart") and v:FindFirstChildOfClass("ClickDetector") then
+                        hayZapatos = true
+                        break
+                    end
+                end
+                if hayZapatos then break end
+            end
+            if hayCajerosVivos() then break end
+            continue
+        end
+
+        Status.Text = "Hood Kicks: Collecting " .. #zapatos .. " shoes..."
+
+        for _, zapato in ipairs(zapatos) do
+            if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then break end
+            if not zapato or not zapato.Parent then continue end
+
+            local cd = zapato:FindFirstChildOfClass("ClickDetector")
+            if not cd then continue end
+
+            local posZapato = zapato.Position
+
+            pcall(function()
+                activarVueloNuevo(CFrame.new(posZapato.X, posZapato.Y - 3, posZapato.Z))
+            end)
+
+            if ES_XENO then
+                task.wait(0.25)
+                workspace.CurrentCamera.CFrame = CFrame.new(
+                    posZapato + Vector3.new(0, 5, 5),
+                    posZapato
+                )
+                task.wait(0.15)
+            else
+                task.wait(0.15)
+            end
+
+            local intentos = 0
+            while zapato and zapato.Parent and intentos < 12 do
+                if hayCajerosVivos() then break end
+                pcall(function() fireclickdetector(cd) end)
+                task.wait(0.1)
+                intentos = intentos + 1
+            end
+
+            if hayCajerosVivos() then break end
+        end
+
+        if hayCajerosVivos() then break end
+
+        Status.Text = "Hood Kicks: Going to NPC to collect payment..."
+
+        local npcRoot = npc:FindFirstChild("HumanoidRootPart") or npc:FindFirstChildWhichIsA("BasePart")
+        if npcRoot then
+            local npcPos = npcRoot.Position
+            pcall(function()
+                activarVueloNuevo(CFrame.new(npcPos.X, npcPos.Y - 3, npcPos.Z))
+            end)
+
+            if ES_XENO then
+                task.wait(0.3)
+                workspace.CurrentCamera.CFrame = CFrame.new(
+                    npcPos + Vector3.new(0, 5, 5),
+                    npcPos
+                )
+                task.wait(0.15)
+            else
+                task.wait(0.25)
+            end
+        end
+
+        if not hayCajerosVivos() then
+            for i = 1, 3 do
+                pcall(function() fireclickdetector(npcCD) end)
+                task.wait(0.2)
+            end
+            Status.Text = "Hood Kicks: Paid! Cooldown NPC (5s)..."
+        end
+
+        if hayCajerosVivos() then break end
+
+        for i = 1, 50 do
+            task.wait(0.1)
+            if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then break end
+        end
+
+        if hayCajerosVivos() then break end
+
+        Status.Text = "Hood Kicks: Waiting shoes respawn (3s)..."
+        for i = 1, 30 do
+            task.wait(0.1)
+            if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then break end
+        end
+
+        if hayCajerosVivos() then break end
+    end
+
+    HOOD_KICKS_ACTIVO = false
+    limpiarVuelo()
+    teleportWithRandomFall()
+
+    if hayCajerosVivos() then
+        Status.Text = "Hood Kicks: ATM revived! Returning to ATM farm..."
+    else
+        Status.Text = "Hood Kicks: Cycle complete"
+    end
+end
+
+-- ========================================
+-- BUCLE PRINCIPAL
+-- ========================================
+task.spawn(function()
+    while not sistemaInicializado do
+        task.wait(1)
+    end
+    while true do
+        task.wait(0.1)
+        while BloquedKO do
+            task.wait(1)
+        end
+
+        if VAULT_COOLDOWN and (tick() - VAULT_ULTIMO_TIEMPO) >= VAULT_COOLDOWN_SEGUNDOS then
+            VAULT_COOLDOWN = false
+            Status.Text = "VAULT: Cooldown expired - checking again..."
+        end
+
+        if VAULT_SYSTEM_ENABLED and not jailProcessActive and not VAULT_ROBANDO and not VAULT_COOLDOWN then
+            local vaultsVivos = contarVaultsVivos()
+            if #vaultsVivos > 0 then
+                Status.Text = "VAULT DETECTED! Pausing ATM farming..."
+                
+                stopAutoShoot()
+                limpiarVuelo()
+                Kamaik.AutoFarm.lastTarget = nil
+                cajerosRotos = {}
+                FASE_ROMPIENDO = true
+                
+                HOOD_KICKS_ACTIVO = false
+
+                robarVault()
+                continue
+            end
+        end
+
+        if VAULT_ROBANDO then
+            Status.Text = "VAULT: Robbery in progress..."
+            task.wait(2)
+            continue
+        end
+
+        if jailProcessActive then
+            Status.Text = "Anti-Jail: Processing escape..."
+            task.wait(2)
+            continue
+        end
+        
+        if Kamaik.AutoFarm.lastStompTime then
+            local tiempoTranscurrido = tick() - Kamaik.AutoFarm.lastStompTime
+            local tiempoRestante = 10 - tiempoTranscurrido
+
+            if tiempoRestante > 0 then
+                Status.Text = "Respawned. Waiting " .. math.ceil(tiempoRestante) .. "s..."
+                task.wait(math.min(1, tiempoRestante))
+                continue
+            end
+            
+            Kamaik.AutoFarm.lastStompTime = nil
+        end
+
+        if FASE_ROMPIENDO then
+            local totalRotos = 0
+            for _ in pairs(cajerosRotos) do
+                totalRotos = totalRotos + 1
+            end
+            
+            Status.Text = "Breaking ATMs (" .. totalRotos .. ")"
+            
+            local target = getNearestCashier()
+            
+            if target and target:FindFirstChild("Head") and target:FindFirstChild("Humanoid") then
+                if HOOD_KICKS_ACTIVO then
+                    HOOD_KICKS_ACTIVO = false
+                    Status.Text = "Hood Kicks interrupted: ATM found!"
+                    task.wait(0.2)
+                end
+
+                if target ~= Kamaik.AutoFarm.lastTarget then
+                    Kamaik.AutoFarm.lastTarget = target
+                    local posCajero = target.Head.Position
+                    
+                    local config = obtenerConfigCajero(posCajero)
+                    local posicionVuelo = Vector3.new(
+                        posCajero.X + config.offsetX,
+                        posCajero.Y + config.offsetY,  
+                        posCajero.Z + config.offsetZ   
+                    )
+                    
+                    if config.angulo and config.angulo > 0 then
+                        activarVueloNuevo(CFrame.new(posicionVuelo), config.angulo)
+                    else
+                        local headCFrame = target.Head.CFrame
+                        local x, y, z = headCFrame:ToEulerAnglesXYZ()
+                        activarVueloNuevo(CFrame.new(posicionVuelo) * CFrame.Angles(x, y, z))
+                    end
+                end
+                
+                local humanoid = target:FindFirstChild("Humanoid")
+                if humanoid then
+                    local char = player.Character
+                    if char then
+                        local armaAUsar = armaActual or "[AUG]"
+                        if AUG_GASTADA then
+                            armaAUsar = "[LMG]"
+                            armaActual = "[LMG]"
+                        end
+
+                        local armaEquipada = char:FindFirstChild(armaAUsar)
+                        if not armaEquipada then
+                            Status.Text = "Equipping " .. armaAUsar .. " before shooting..."
+                            if not equiparArma(armaAUsar) then
+                                if attemptGetArmas() then
+                                    equiparArma(armaAUsar)
+                                else
+                                    Kamaik.AutoFarm.lastTarget = nil
+                                    task.wait(2)
+                                    continue
+                                end
+                            end
+                            task.wait(0.3)
+                        end
+                    end
+
+                    task.wait(0.3)
+                    
+                    Status.Text = "Shooting ATM"
+                    local detectadoDano = superDisparo(target)
+                    
+                    if not target or not target.Parent or not target:FindFirstChild("Humanoid") then
+                        Kamaik.AutoFarm.lastTarget = nil
+                        continue
+                    end
+                    
+                    local muerto = (target.Humanoid.Health <= 0)
+                    if not detectadoDano or not muerto then
+                        Kamaik.AutoFarm.lastTarget = nil
+                        continue
+                    end
+
+                    if PRIORITIZE_SHOOTING then
+                        local balasRestantes = obtenerBalas(armaActual)
+                        if balasRestantes and balasRestantes < 8 then
+                            Status.Text = armaActual .. " low ammo - switching..."
+                            
+                            task.spawn(function()
+                                recargar(armaActual)
+                            end)
+                            
+                            local otraArma = (armaActual == "[LMG]") and "[AUG]" or "[LMG]"
+                            if otraArma == "[AUG]" and AUG_GASTADA then
+                                otraArma = "[LMG]"
+                            end
+                            
+                            armaActual = otraArma
+                            equiparArma(otraArma)
+                            task.wait(0.1)
+                        end
+
+                        if not esCajeroIgnorado(target.Head.Position) then
+                            table.insert(cajerosRotos, {
+                                posicion = target.Head.Position,
+                                cajero = target
+                            })
+                        end
+                        
+                        if breakATMTime > 0 then
+                            Status.Text = "ATM broken! Quick teleport..."
+                            teleportWithRandomFall()
+                            task.wait(breakATMTime)
+                            Status.Text = "Resuming breaking..."
+                        end
+                        
+                    else
+                        Status.Text = "Collecting immediately..."
+                        
+                        if BeforePickingg > 0 then
+                            Status.Text = "Money found! Teleporting..."
+                            teleportWithRandomFall()
+                            task.wait(BeforePickingg)
+                            
+                            local config = obtenerConfigCajero(target.Head.Position)
+                            local posVuelo = Vector3.new(
+                                target.Head.Position.X + config.offsetX,
+                                target.Head.Position.Y + config.offsetY - 4,
+                                target.Head.Position.Z + config.offsetZ
+                            )
+                            
+                            if config.angulo and config.angulo > 0 then
+                                activarVueloNuevo(CFrame.new(posVuelo), config.angulo)
+                            else
+                                activarVueloNuevo(CFrame.new(posVuelo))
+                            end
+                            task.wait(0.3)
+                        end
+                        
+                        local armaUsada = armaActual
+                        task.spawn(function()
+                            task.wait(0.3)
+                            recargar(armaUsada)
+                        end)
+                        
+                        local recogio, cantidadRecogida = recogerDineroCerca(target.Head.Position)
+                        
+                        if recogio then
+                            Status.Text = "Collected! (" .. cantidadRecogida .. " drops)"
+                        end
+                        
+                        task.wait(0.3)
+                        
+                        local balasActuales = obtenerBalas(armaActual)
+                        if not balasActuales or balasActuales <= 0 then
+                            Status.Text = armaActual .. " still empty - switching..."
+                            
+                            local otraArma = (armaActual == "[LMG]") and "[AUG]" or "[LMG]"
+                            if otraArma == "[AUG]" and AUG_GASTADA then
+                                otraArma = "[LMG]"
+                            end
+                            
+                            armaActual = otraArma
+                            
+                            if equiparArma(otraArma) then
+                                task.wait(0.3)
+                                local balasOtraArma = obtenerBalas(otraArma)
+                                
+                                if not balasOtraArma or balasOtraArma <= 0 then
+                                    Status.Text = otraArma .. " also empty - reloading..."
+                                    recargar(otraArma)
+                                    task.wait(2.5)
+                                    
+                                    balasOtraArma = obtenerBalas(otraArma)
+                                    if not balasOtraArma or balasOtraArma <= 0 then
+                                        Status.Text = "Need to buy " .. otraArma .. " ammo..."
+                                        
+                                        if otraArma == "[LMG]" then
+                                            comprarAmmo()
+                                            task.wait(3)
+                                            equiparArma("[LMG]")
+                                            task.wait(0.3)
+                                            recargar("[LMG]")
+                                            task.wait(2)
+                                        else
+                                            comprarAmmoAUG()
+                                            task.wait(3)
+                                            equiparArma("[AUG]")
+                                            task.wait(0.3)
+                                            recargar("[AUG]")
+                                            task.wait(2)
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                        
+                        if breakATMTime > 0 then
+                            teleportWithRandomFall()
+                            task.wait(breakATMTime)
+                        end
+                    end
+                    
+                    Kamaik.AutoFarm.lastTarget = nil
+                end
+            else
+                noCashierTimer += 0.1
+                if noCashierTimer >= 5 then
+                    if PRIORITIZE_SHOOTING then
+                        local totalRotos = 0
+                        for _ in pairs(cajerosRotos) do
+                            totalRotos = totalRotos + 1
+                        end
+                        
+                        if totalRotos > 0 then
+                            Status.Text = "All ATMs broken! Collecting..."
+                            FASE_ROMPIENDO = false
+                        else
+                            if not HOOD_KICKS_ACTIVO and not VAULT_ROBANDO and not jailProcessActive and not BloquedKO then
+                                if not hayCajerosVivos() then
+                                    Status.Text = "No ATMs alive - Activating Hood Kicks..."
+                                    task.spawn(farmHoodKicks)
+                                    task.wait(1)
+                                end
+                            end
+                            teleportWithRandomFall()
+                            task.wait(1)
+                        end
+                    else
+                        Status.Text = "No ATMs - Reloading weapons..."
+                        
+                        local char = player.Character
+                        if char then
+                            AUG_GASTADA = false
+                            armaActual = "[AUG]"
+                            
+                            local necesitaComprarAUG = false
+                            local necesitaComprarLMG = false
+                            
+                            if equiparArma("[AUG]") then
+                                task.wait(0.3)
+                                local balasAUG = obtenerBalas("[AUG]")
+                                if not balasAUG or balasAUG <= 10 then
+                                    recargar("[AUG]")
+                                    task.wait(2.5)
+                                    
+                                    balasAUG = obtenerBalas("[AUG]")
+                                    if not balasAUG or balasAUG <= 5 then
+                                        necesitaComprarAUG = true
+                                    end
+                                end
+                            end
+                            
+                            if equiparArma("[LMG]") then
+                                task.wait(0.3)
+                                local balasLMG = obtenerBalas("[LMG]")
+                                if not balasLMG or balasLMG <= 20 then
+                                    recargar("[LMG]")
+                                    task.wait(2.5)
+                                    
+                                    balasLMG = obtenerBalas("[LMG]")
+                                    if not balasLMG or balasLMG <= 10 then
+                                        necesitaComprarLMG = true
+                                    end
+                                end
+                            end
+                            
+                            if necesitaComprarAUG then
+                                Status.Text = "Buying AUG ammo..."
+                                comprarAmmoAUG()
+                                task.wait(2)
+                                equiparArma("[AUG]")
+                                task.wait(0.3)
+                                recargar("[AUG]")
+                                task.wait(2)
+                            end
+                            
+                            if necesitaComprarLMG then
+                                Status.Text = "Buying LMG ammo..."
+                                comprarAmmo()
+                                task.wait(2)
+                                equiparArma("[LMG]")
+                                task.wait(0.3)
+                                recargar("[LMG]")
+                                task.wait(2)
+                            end
+                            
+                            Status.Text = "Weapons ready!"
+                            armaActual = "[AUG]"
+                        end
+
+                        if not HOOD_KICKS_ACTIVO and not VAULT_ROBANDO and not jailProcessActive and not BloquedKO then
+                            if not hayCajerosVivos() then
+                                Status.Text = "No ATMs alive - Activating Hood Kicks..."
+                                task.spawn(farmHoodKicks)
+                                task.wait(1)
+                            end
+                        end
+                        
+                        teleportWithRandomFall()
+                        task.wait(2)
+                    end
+                    noCashierTimer = 0
+                end
+            end
+        else
+            -- ========================================
+            -- FASE DE RECOLECCIÓN (PrioritizeShooting = true)
+            -- ========================================
+            
+            if #cajerosRotos == 0 then
+                FASE_ROMPIENDO = true
+                continue
+            end
+            
+            Status.Text = "Preparing to collect money..."
+            
+            local char = player.Character
+            if char then
+                local humanoid = char:FindFirstChildOfClass("Humanoid")
+                if humanoid then
+                    humanoid:UnequipTools()
+                end
+            end
+            
+            local i = 1
+            while i <= #cajerosRotos do
+                local data = cajerosRotos[i]
+                Status.Text = "Collecting (" .. i .. "/" .. #cajerosRotos .. ")"
+                
+                local config = obtenerConfigCajero(data.posicion)
+                local posVuelo = Vector3.new(
+                    data.posicion.X + config.offsetX,
+                    data.posicion.Y + config.offsetY - 4,
+                    data.posicion.Z + config.offsetZ
+                )
+
+                if config.angulo and config.angulo > 0 then
+                    activarVueloNuevo(CFrame.new(posVuelo), config.angulo)
+                else
+                    activarVueloNuevo(CFrame.new(posVuelo))
+                end
+                task.wait(0.3)
+                
+                activarVueloNuevo(CFrame.new(posVuelo))
+                task.wait(0.3)
+                
+                local dropFolder = Workspace:WaitForChild("Ignored"):WaitForChild("Drop")
+                local hayDinero = false
+                
+                for _, drop in ipairs(dropFolder:GetChildren()) do
+                    if drop:IsA("Part") and drop.Name:find("Money") and (drop.Position - data.posicion).Magnitude <= 35 then
+                        hayDinero = true
+                        break
+                    end
+                end
+                
+                if not hayDinero then
+                    Status.Text = "No money at ATM " .. i .. ", skipping..."
+                    table.remove(cajerosRotos, i)
+                    teleportWithRandomFall()
+                    task.wait(0.5)
+                    continue
+                end
+                
+                if BeforePickingg > 0 then
+                    Status.Text = "Money found! Teleporting..."
+                    teleportWithRandomFall()
+                    task.wait(BeforePickingg)
+                end
+                
+                Status.Text = "Collecting (" .. i .. "/" .. #cajerosRotos .. ")"
+                if config.angulo and config.angulo > 0 then
+                    activarVueloNuevo(CFrame.new(posVuelo), config.angulo)
+                else
+                    activarVueloNuevo(CFrame.new(posVuelo))
+                end
+                task.wait(0.2)
+                
+                local recogio, cantidadRecogida = recogerDineroCerca(data.posicion)
+                
+                if recogio then
+                    Status.Text = "Collected " .. cantidadRecogida .. " drops at ATM " .. i
+                end
+                
+                Status.Text = "Waiting before next ATM..."
+                teleportWithRandomFall()
+                task.wait(waitTime)
+                
+                i += 1
+            end
+            
+            Status.Text = "Collection complete! Checking weapons..."
+
+            local char = player.Character
+            if char then
+                AUG_GASTADA = false
+                armaActual = "[AUG]"
+                
+                local necesitaComprarAUG = false
+                local necesitaComprarLMG = false
+                
+                if equiparArma("[AUG]") then
+                    task.wait(0.3)
+                    recargar("[AUG]")
+                    task.wait(2.5)
+                    
+                    local balasDespuesAUG = obtenerBalas("[AUG]") or 0
+                    if balasDespuesAUG <= 5 then
+                        necesitaComprarAUG = true
+                    end
+                end
+                
+                if equiparArma("[LMG]") then
+                    task.wait(0.3)
+                    recargar("[LMG]")
+                    task.wait(2.5)
+                    
+                    local balasDespuesLMG = obtenerBalas("[LMG]") or 0
+                    if balasDespuesLMG <= 10 then
+                        necesitaComprarLMG = true
+                    end
+                end
+                
+                if necesitaComprarAUG then
+                    comprarAmmoAUG()
+                    task.wait(2)
+                    equiparArma("[AUG]")
+                    task.wait(0.3)
+                    recargar("[AUG]")
+                    task.wait(2)
+                end
+                
+                if necesitaComprarLMG then
+                    comprarAmmo()
+                    task.wait(2)
+                    equiparArma("[LMG]")
+                    task.wait(0.3)
+                    recargar("[LMG]")
+                    task.wait(2)
+                end
+            end
+            
+            Status.Text = "Ready to break ATMs again!"
+            cajerosRotos = {}
+            FASE_ROMPIENDO = true
+            task.wait(2)
+        end
+    end
+end)
+
+
+-- ============= SISTEMA DE OPTIMIZACIÓN =============
+local IGNORED = workspace:WaitForChild("Ignored")
+task.spawn(function()
+    while COMPRANDO_ARMAS do
+        task.wait(1)
+    end
+    
+    if not VAULT_SYSTEM_ENABLED then
+        local Lighting = game:GetService("Lighting")
+        local keepInWorkspace = {"Ignored", "Players", "Camera", "Terrain", "Cashiers", player.Name, "Core"}
+        local keepInIgnored = {"Drop", "Shop", "Clean the shoes on the floor and come to me for cash"}
+
+        for _, obj in ipairs(workspace:GetChildren()) do
+            if not table.find(keepInWorkspace, obj.Name) and obj.Name ~= player.Name then
+                pcall(function() obj:Destroy() end)
+            end
+        end
+
+        for _, obj in ipairs(IGNORED:GetChildren()) do
+            local debeGuardar = table.find(keepInIgnored, obj.Name) or obj.Name == player.Name
+            if not debeGuardar then
+                pcall(function() obj:Destroy() end)
+            end
+        end
+
+        player.Backpack.ChildAdded:Connect(function(child)
+            if COMPRANDO_ARMAS then return end
+            
+            task.wait(0.1)
+            if child.Name ~= "[LMG]" 
+            and child.Name ~= "[AUG]" 
+            and child.Name ~= "[Grenade]"
+            and child.Name ~= "[Key]"
+            and child.Name ~= "[Mask]"
+            and not child.Name:find("LMG") 
+            and not child.Name:find("AUG")
+            and not child.Name:find("Grenade")
+            and not child.Name:find("Key")
+            and not child.Name:find("Mask")
+            and not child.Name:find("Ammo") then
+                pcall(function() child:Destroy() end)
+            end
+        end)
+
+        for _, item in ipairs(player.Backpack:GetChildren()) do
+            if item.Name ~= "[LMG]" 
+            and item.Name ~= "[AUG]" 
+            and item.Name ~= "[Grenade]"
+            and item.Name ~= "[Key]"
+            and item.Name ~= "[Mask]"
+            and not item.Name:find("LMG") 
+            and not item.Name:find("AUG")
+            and not item.Name:find("Grenade")
+            and not item.Name:find("Key")
+            and not item.Name:find("Mask")
+            and not item.Name:find("Ammo") then
+                pcall(function() item:Destroy() end)
+            end
+        end
+
+        local function clearLightingEffects()
+            for _, className in ipairs({"Sky", "Atmosphere", "Clouds"}) do
+                local obj = Lighting:FindFirstChildOfClass(className)
+                if obj then obj:Destroy() end
+            end
+
+            Lighting.Ambient = Color3.new(1, 1, 1)
+            Lighting.OutdoorAmbient = Color3.new(1, 1, 1)
+            Lighting.Brightness = 0
+            Lighting.ExposureCompensation = -100
+
+            local emptySky = Instance.new("Sky")
+            for _, face in ipairs({"Bk", "Dn", "Ft", "Lf", "Rt", "Up"}) do
+                emptySky["Skybox" .. face] = "rbxassetid://1"
+            end
+            emptySky.Parent = Lighting
+        end
+
+        clearLightingEffects()
+    end
+end)
+
+local hideCash = true
+
+local function processCashPart(part)
+    if not part:IsA("Part") then return end
+    if not part.Name:find("Money") then return end
+
+    for _, child in ipairs(part:GetChildren()) do
+        if child:IsA("Decal") then
+            child:Destroy()
+        elseif child:IsA("BillboardGui") then
+            child.Enabled = not hideCash
+        end
+    end
+
+    part.Transparency = hideCash and 1 or 0
+end
+
+for _, drop in ipairs(IGNORED.Drop:GetChildren()) do
+    processCashPart(drop)
+end
+
+IGNORED.Drop.ChildAdded:Connect(function(child)
+    task.wait(0.3)
+    processCashPart(child)
+end)
+
+task.spawn(function()
+    task.wait(6)
+    if setfpscap then
+        setfpscap(getgenv().AutofarmSettings["Config"]["Fps"])
+    end
+end)
+
+task.spawn(function()
+    local stuckTimer = 0
+    
+    while true do
+        task.wait(1)
+        
+        if Status.Text == "Respawned successfully" or Status.Text == "Resuming farm..." or Status.Text == "Shooting ATM" then
+            stuckTimer = stuckTimer + 1
+            
+            if stuckTimer >= 50 then
+                if not Kamaik.yaProcesadoKO then return end
+                if not getgenv().AutofarmSettings.Serverhop.Toggle then
+                    Status.Text = "Bug detected - Resetting character..."
+                    if player.Character and player.Character:FindFirstChild("Humanoid") then
+                        player.Character.Humanoid.Health = 0
+                    end
+                    stuckTimer = 0
+                else
+                    Status.Text = "Server-Hop, bug detect"
+                    serverHop()
+                    break
+                end
+            end
+        else
+            stuckTimer = 0
+        end
+    end
+end)
+
+
+end)
