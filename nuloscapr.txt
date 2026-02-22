@@ -439,7 +439,7 @@ local function obtenerConfigCajero(posicionCajero)
             return config
         end
     end
-    return {offsetX = 0, offsetY = -4, offsetZ = 0}
+    return {offsetX = 0, offsetY = -4, offsetZ = 0, angulo = 0}
 end
 
 local Players = game:GetService("Players")
@@ -1154,6 +1154,14 @@ function activarVueloNuevo(targetCFrame, anguloOpcional)
         targetCFrame = CFrame.new(posicion) * CFrame.Angles(0, math.rad(anguloOpcional), 0)
     end
 
+    -- Detener vuelo anterior ANTES de mover el personaje
+    Kamaik.AutoFarm.vueloActivo = false
+    if workspace:FindFirstChild("Core") then
+        workspace.Core:Destroy()
+    end
+    -- Pequeña espera para que el loop anterior termine
+    task.wait()
+
     root.CFrame = targetCFrame
     root.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
     root.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
@@ -1162,8 +1170,6 @@ function activarVueloNuevo(targetCFrame, anguloOpcional)
     humanoid:ChangeState(Enum.HumanoidStateType.Landed)
     
     Kamaik.targettp = targetCFrame
-    limpiarVuelo()
-    task.wait(0.1)
 
     if workspace:FindFirstChild("Core") then
         workspace.Core:Destroy()
@@ -2594,8 +2600,6 @@ player.CharacterAdded:Connect(function(char)
             return  
         end
         
-        root.CFrame = CFrame.new(0, 15000, 0)
-        task.wait(0.2)
         teleportWithRandomFall()
         optimizarJugador(char)
         task.wait(4)
@@ -2979,7 +2983,7 @@ local function recogerDineroCerca(cajeroPos)
                     recogio = true
                     dropsRecogidos[idx] = true
                     dropsRecogidosEnEsteIntento += 1
-                    if pickupInterval > 0 and idx < #cajerosRotos then task.wait(pickupInterval) end
+                    if pickupInterval > 0 and idx < #dropsCercanos then task.wait(pickupInterval) end
                 end
             end
         end
@@ -3899,9 +3903,11 @@ task.spawn(function()
                             end
                         end
                         
-                        -- Solo espera entre cajeros, sin teletransporte lejano
+                        -- Espera mínima entre cajeros para no hacer loop tight sobre cajero muerto
                         if breakATMTime > 0 then
                             task.wait(breakATMTime)
+                        else
+                            task.wait(0.2)
                         end
                     end
                     
@@ -4012,7 +4018,6 @@ task.spawn(function()
                 end
                 
                 if BeforePickingg > 0 then
-                    teleportWithRandomFall()
                     task.wait(BeforePickingg)
                 end
                 
