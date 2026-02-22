@@ -1,4 +1,3 @@
-
 script_key = 'VERSION_LIMPIA'
 
 -- ═══════════════════════════════════════════════════════════════════════════
@@ -700,18 +699,6 @@ PlayerGlow.ZIndex = 9
 PlayerGlow.Parent = RadarBg
 Instance.new("UICorner", PlayerGlow).CornerRadius = UDim.new(0.5, 0)
 
-local HoodKicksDot = Instance.new("TextLabel")
-HoodKicksDot.Name = "HoodKicksDot"
-HoodKicksDot.Size = UDim2.new(0, 20, 0, 20)
-HoodKicksDot.AnchorPoint = Vector2.new(0.5, 0.5)
-HoodKicksDot.Position = UDim2.new(0.5, 0, 0.5, 0)
-HoodKicksDot.BackgroundTransparency = 1
-HoodKicksDot.Text = "🏠"
-HoodKicksDot.TextSize = 14
-HoodKicksDot.ZIndex = 8
-HoodKicksDot.Visible = false
-HoodKicksDot.Parent = RadarBg
-
 local LegendFrame = Instance.new("Frame")
 LegendFrame.Size = UDim2.new(1, -10, 0, 18)
 LegendFrame.Position = UDim2.new(0, 5, 1, -20)
@@ -719,7 +706,7 @@ LegendFrame.BackgroundTransparency = 1
 LegendFrame.Parent = RadarFrame
 
 local LegendVivo = Instance.new("TextLabel")
-LegendVivo.Size = UDim2.new(0.33, 0, 1, 0)
+LegendVivo.Size = UDim2.new(0.5, 0, 1, 0)
 LegendVivo.Position = UDim2.new(0, 0, 0, 0)
 LegendVivo.BackgroundTransparency = 1
 LegendVivo.Text = "● Vivo"
@@ -730,8 +717,8 @@ LegendVivo.TextXAlignment = Enum.TextXAlignment.Center
 LegendVivo.Parent = LegendFrame
 
 local LegendRoto = Instance.new("TextLabel")
-LegendRoto.Size = UDim2.new(0.33, 0, 1, 0)
-LegendRoto.Position = UDim2.new(0.33, 0, 0, 0)
+LegendRoto.Size = UDim2.new(0.5, 0, 1, 0)
+LegendRoto.Position = UDim2.new(0.5, 0, 0, 0)
 LegendRoto.BackgroundTransparency = 1
 LegendRoto.Text = "● Roto"
 LegendRoto.Font = Enum.Font.Gotham
@@ -739,17 +726,6 @@ LegendRoto.TextSize = 11
 LegendRoto.TextColor3 = Color3.fromRGB(255, 70, 70)
 LegendRoto.TextXAlignment = Enum.TextXAlignment.Center
 LegendRoto.Parent = LegendFrame
-
-local LegendHood = Instance.new("TextLabel")
-LegendHood.Size = UDim2.new(0.33, 0, 1, 0)
-LegendHood.Position = UDim2.new(0.66, 0, 0, 0)
-LegendHood.BackgroundTransparency = 1
-LegendHood.Text = "🏠 Kicks"
-LegendHood.Font = Enum.Font.Gotham
-LegendHood.TextSize = 11
-LegendHood.TextColor3 = Color3.fromRGB(255, 200, 50)
-LegendHood.TextXAlignment = Enum.TextXAlignment.Center
-LegendHood.Parent = LegendFrame
 
 local radarDots = {}
 
@@ -902,51 +878,6 @@ task.spawn(function()
             pcall(function() data.glow:Destroy() end)
             radarDots[cajero] = nil
         end
-    end)
-
-    RunService.Heartbeat:Connect(function()
-        local char = player.Character
-        if not char then return end
-        local root = char:FindFirstChild("HumanoidRootPart")
-        if not root then return end
-
-        local npc = workspace:FindFirstChild("Ignored") 
-            and workspace.Ignored:FindFirstChild("Clean the shoes on the floor and come to me for cash")
-        
-        if not npc then
-            HoodKicksDot.Visible = false
-            return
-        end
-
-        local npcRoot = npc:FindFirstChild("HumanoidRootPart") or npc:FindFirstChildWhichIsA("BasePart")
-        if not npcRoot then
-            HoodKicksDot.Visible = false
-            return
-        end
-
-        local playerPos = root.Position
-        local npcPos = npcRoot.Position
-        local dx = npcPos.X - playerPos.X
-        local dz = npcPos.Z - playerPos.Z
-        local dist = math.sqrt(dx*dx + dz*dz)
-
-        if dist > RADAR_RANGE then
-            local escala = RADAR_RANGE / dist
-            dx = dx * escala
-            dz = dz * escala
-        end
-
-        local cx = (dx / RADAR_RANGE) * 0.5
-        local cy = (dz / RADAR_RANGE) * 0.5
-        local mag = math.sqrt(cx*cx + cy*cy)
-        if mag > 0.46 then
-            local norm = 0.46 / mag
-            cx = cx * norm
-            cy = cy * norm
-        end
-
-        HoodKicksDot.Position = UDim2.new(0.5 + cx, 0, 0.5 + cy, 0)
-        HoodKicksDot.Visible = true
     end)
 
 end)
@@ -1154,12 +1085,10 @@ function activarVueloNuevo(targetCFrame, anguloOpcional)
         targetCFrame = CFrame.new(posicion) * CFrame.Angles(0, math.rad(anguloOpcional), 0)
     end
 
-    -- Detener vuelo anterior ANTES de mover el personaje
     Kamaik.AutoFarm.vueloActivo = false
     if workspace:FindFirstChild("Core") then
         workspace.Core:Destroy()
     end
-    -- Pequeña espera para que el loop anterior termine
     task.wait()
 
     root.CFrame = targetCFrame
@@ -3595,149 +3524,6 @@ local function robarVault()
 end
 
 -- ========================================
--- SISTEMA HOOD KICKS FARM
--- ========================================
-
-local HOOD_KICKS_ACTIVO = false
-
-local function hayCajerosVivos()
-    local cashiers = workspace:FindFirstChild("Cashiers")
-    if not cashiers then return false end
-    for _, v in pairs(cashiers:GetChildren()) do
-        if v.Name == "VAULT" then continue end
-        if v:FindFirstChild("Head") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then return true end
-    end
-    return false
-end
-
-local function farmHoodKicks()
-    if HOOD_KICKS_ACTIVO then return end
-    if jailProcessActive then return end
-    if VAULT_ROBANDO then return end
-    if BloquedKO then return end
-
-    HOOD_KICKS_ACTIVO = true
-    Status.Text = "Hood Kicks: Starting..."
-
-    local dropFolder = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Drop")
-    if not dropFolder then HOOD_KICKS_ACTIVO = false return end
-
-    while not hayCajerosVivos() do
-        if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then break end
-
-        local npc = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Clean the shoes on the floor and come to me for cash")
-        local npcCD = npc and npc:FindFirstChildOfClass("ClickDetector")
-
-        if not npc or not npcCD then
-            Status.Text = "Hood Kicks: NPC not found, waiting..."
-            for i = 1, 20 do
-                task.wait(0.25)
-                if hayCajerosVivos() then break end
-                npc = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Clean the shoes on the floor and come to me for cash")
-                npcCD = npc and npc:FindFirstChildOfClass("ClickDetector")
-                if npc and npcCD then break end
-            end
-            if hayCajerosVivos() or not npc or not npcCD then break end
-        end
-
-        local zapatos = {}
-        for _, v in pairs(dropFolder:GetChildren()) do
-            if v:IsA("MeshPart") and v:FindFirstChildOfClass("ClickDetector") then table.insert(zapatos, v) end
-        end
-
-        if #zapatos == 0 then
-            Status.Text = "Hood Kicks: Waiting for shoes to spawn..."
-            for i = 1, 30 do
-                task.wait(0.1)
-                if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then break end
-                local hayZapatos = false
-                for _, v in pairs(dropFolder:GetChildren()) do
-                    if v:IsA("MeshPart") and v:FindFirstChildOfClass("ClickDetector") then hayZapatos = true break end
-                end
-                if hayZapatos then break end
-            end
-            if hayCajerosVivos() then break end
-            continue
-        end
-
-        Status.Text = "Hood Kicks: Collecting " .. #zapatos .. " shoes..."
-
-        for _, zapato in ipairs(zapatos) do
-            if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then break end
-            if not zapato or not zapato.Parent then continue end
-            local cd = zapato:FindFirstChildOfClass("ClickDetector")
-            if not cd then continue end
-            local posZapato = zapato.Position
-            pcall(function() activarVueloNuevo(CFrame.new(posZapato.X, posZapato.Y - 3, posZapato.Z)) end)
-            if ES_XENO then
-                task.wait(0.25)
-                workspace.CurrentCamera.CFrame = CFrame.new(posZapato + Vector3.new(0, 5, 5), posZapato)
-                task.wait(0.15)
-            else
-                task.wait(0.15)
-            end
-            local intentos = 0
-            while zapato and zapato.Parent and intentos < 12 do
-                if hayCajerosVivos() then break end
-                pcall(function() fireclickdetector(cd) end)
-                task.wait(0.1)
-                intentos = intentos + 1
-            end
-            if hayCajerosVivos() then break end
-        end
-
-        if hayCajerosVivos() then break end
-
-        Status.Text = "Hood Kicks: Going to NPC to collect payment..."
-        local npcRoot = npc:FindFirstChild("HumanoidRootPart") or npc:FindFirstChildWhichIsA("BasePart")
-        if npcRoot then
-            local npcPos = npcRoot.Position
-            pcall(function() activarVueloNuevo(CFrame.new(npcPos.X, npcPos.Y - 3, npcPos.Z)) end)
-            if ES_XENO then
-                task.wait(0.3)
-                workspace.CurrentCamera.CFrame = CFrame.new(npcPos + Vector3.new(0, 5, 5), npcPos)
-                task.wait(0.15)
-            else
-                task.wait(0.25)
-            end
-        end
-
-        if not hayCajerosVivos() then
-            for i = 1, 3 do
-                pcall(function() fireclickdetector(npcCD) end)
-                task.wait(0.2)
-            end
-        end
-
-        if hayCajerosVivos() then break end
-
-        for i = 1, 50 do
-            task.wait(0.1)
-            if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then break end
-        end
-
-        if hayCajerosVivos() then break end
-
-        for i = 1, 30 do
-            task.wait(0.1)
-            if hayCajerosVivos() or jailProcessActive or VAULT_ROBANDO or BloquedKO then break end
-        end
-
-        if hayCajerosVivos() then break end
-    end
-
-    HOOD_KICKS_ACTIVO = false
-    limpiarVuelo()
-    teleportWithRandomFall()
-
-    if hayCajerosVivos() then
-        Status.Text = "Hood Kicks: ATM revived! Returning to ATM farm..."
-    else
-        Status.Text = "Hood Kicks: Cycle complete"
-    end
-end
-
--- ========================================
 -- BUCLE PRINCIPAL
 -- ========================================
 task.spawn(function()
@@ -3759,7 +3545,6 @@ task.spawn(function()
                 Kamaik.AutoFarm.lastTarget = nil
                 cajerosRotos = {}
                 FASE_ROMPIENDO = true
-                HOOD_KICKS_ACTIVO = false
                 robarVault()
                 continue
             end
@@ -3782,8 +3567,6 @@ task.spawn(function()
             local target = getNearestCashier()
             
             if target and target:FindFirstChild("Head") and target:FindFirstChild("Humanoid") then
-                if HOOD_KICKS_ACTIVO then HOOD_KICKS_ACTIVO = false end
-
                 if target ~= Kamaik.AutoFarm.lastTarget then
                     Kamaik.AutoFarm.lastTarget = target
                     local posCajero = target.Head.Position
@@ -3854,17 +3637,14 @@ task.spawn(function()
                         end
                         
                     else
-                        -- Recoger dinero inmediatamente sin teletransportarse lejos
                         local cajeroPos = target.Head.Position
                         local config = obtenerConfigCajero(cajeroPos)
                         local posVuelo = Vector3.new(cajeroPos.X + config.offsetX, cajeroPos.Y + config.offsetY - 4, cajeroPos.Z + config.offsetZ)
                         
-                        -- Pequeña espera para que caiga el dinero
                         if BeforePickingg > 0 then
                             task.wait(BeforePickingg)
                         end
                         
-                        -- Posicionarse encima del dinero
                         if config.angulo and config.angulo > 0 then
                             activarVueloNuevo(CFrame.new(posVuelo), config.angulo)
                         else
@@ -3903,7 +3683,6 @@ task.spawn(function()
                             end
                         end
                         
-                        -- Espera mínima entre cajeros para no hacer loop tight sobre cajero muerto
                         if breakATMTime > 0 then
                             task.wait(breakATMTime)
                         else
@@ -3923,12 +3702,6 @@ task.spawn(function()
                         if totalRotos > 0 then
                             FASE_ROMPIENDO = false
                         else
-                            if not HOOD_KICKS_ACTIVO and not VAULT_ROBANDO and not jailProcessActive and not BloquedKO then
-                                if not hayCajerosVivos() then
-                                    task.spawn(farmHoodKicks)
-                                    task.wait(1)
-                                end
-                            end
                             teleportWithRandomFall()
                             task.wait(1)
                         end
@@ -3965,13 +3738,6 @@ task.spawn(function()
                             armaActual = "[AUG]"
                         end
 
-                        if not HOOD_KICKS_ACTIVO and not VAULT_ROBANDO and not jailProcessActive and not BloquedKO then
-                            if not hayCajerosVivos() then
-                                task.spawn(farmHoodKicks)
-                                task.wait(1)
-                            end
-                        end
-                        
                         teleportWithRandomFall()
                         task.wait(2)
                     end
@@ -4073,7 +3839,7 @@ task.spawn(function()
     if not VAULT_SYSTEM_ENABLED then
         local Lighting = game:GetService("Lighting")
         local keepInWorkspace = {"Ignored", "Players", "Camera", "Terrain", "Cashiers", player.Name, "Core"}
-        local keepInIgnored = {"Drop", "Shop", "Clean the shoes on the floor and come to me for cash"}
+        local keepInIgnored = {"Drop", "Shop"}
 
         for _, obj in ipairs(workspace:GetChildren()) do
             if not table.find(keepInWorkspace, obj.Name) and obj.Name ~= player.Name then
