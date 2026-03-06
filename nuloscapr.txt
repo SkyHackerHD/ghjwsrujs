@@ -2136,7 +2136,7 @@ local function serverHop()
     if getgenv().AutofarmSettings.Serverhop.Type == 1 then
         sortOrder = "Asc"
         minPlayers = 0
-        maxPlayers = 5
+        maxPlayers = 2
     elseif getgenv().AutofarmSettings.Serverhop.Type == 2 then
         sortOrder = "Desc"
         minPlayers = 6
@@ -3945,3 +3945,4 @@ task.spawn(function()
         end
     end
 end)
+
