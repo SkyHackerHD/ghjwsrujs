@@ -255,8 +255,8 @@ local mainEvent = RS:WaitForChild("MainEvent", 10)
 
 local codesList = {
     "VALENTINES2026",
-    "HALLOWEEN25",
-    "OCTOBER25",
+    "DEAGLE",
+    "SPRING26",
     "HAPPYHOLIDAYS25",
     "XMAS2025",
     "XMASEVE25"
